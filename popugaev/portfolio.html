@@ -1,0 +1,355 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="js/fancybox3/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.touchwipe.js"></script>
+    <link rel="stylesheet" href="css/jquery.slinky.css">
+    <script src="js/jquery.slinky.js"></script>
+    <script src="js/fancybox3/jquery.fancybox.js"></script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+    <script src="js/fullPage/fullpage.js"></script>
+    <link href="js/fullPage/fullpage.css" rel="stylesheet">
+
+    <script>
+        $(function(){
+
+            $('#fullpage').fullpage({
+                sectionSelector: '.vertical-scrolling',
+                slideSelector: '.horizontal-scrolling',
+                controlArrows: false,
+                responsiveWidth: 500
+            });
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                // Optional parameters
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 3,
+                direction: 'horizontal',
+                centeredSlides: true,
+                loop: true,
+                breakpoints: {
+                    480: {
+                        slidesPerView: 1
+                    }
+                },
+                // autoplay: {
+                //     delay: 4000
+                // },
+                fadeEffect: {
+                    crossFade: true
+                }
+            });
+
+        });
+    </script>
+</head>
+<body class="index_page">
+    <div id="panel"><!-- Bitrix panel --></div>
+    <div id="html">
+        <div class="wrapper">
+            <div class="inner">
+
+                <!-- HEADER -->
+                <header class="header-mobile">
+                    <div class="header-mobile-row header-mobile-row--bg">
+                        <div class="header-nav__logo">
+                            <span class="header-nav__name">Попугаев Павел Вадимович</span>
+                            <span class="header-nav__desc">пластический хирург, к. м. н.</span>
+                        </div>
+                        <div class="header-mobile-row header-mobile-row--wrap">
+                            <div class="header-mobile-row__item header-mobile-row--toggle">
+                                <div id="burger_container">
+                                    <div class="menu__button">
+                                        <div class="menu__button-open">
+                                            <div class="menu__button-line n1"></div>
+                                            <div class="menu__button-line n2"></div>
+                                            <div class="menu__button-line n3"></div>
+                                        </div>
+                                        <div class="menu__button-close">
+                                            <div class="menu__button-line n4"></div>
+                                            <div class="menu__button-line n5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="sidebar_overlay"></div>
+                                <div id="sidebar">
+                                    <a href="#" class="sidebar_close">
+                                        <svg width="20px" height="20px">
+                                            <path fill-rule="evenodd"  fill="#b78f65" d="M19.915,17.712 L17.712,19.915 L10.000,12.203 L2.288,19.915 L0.085,17.712 L7.797,10.000 L0.085,2.288 L2.288,0.084 L10.000,7.796 L17.712,0.084 L19.915,2.288 L12.203,10.000 L19.915,17.712 Z"/>
+                                        </svg>
+                                    </a>
+                                    <div id="sidebar_menu_container">
+                                        <ul class="sidebar_menu">
+                                            <li><a href="about.html">О хирурге</a></li>
+                                            <li><a href="contacts.html">График работы</a></li>
+                                            <li><a href="portfolio.html">Портфолио</a></li>
+                                            <li><a href="service.html">Услуги и цены</a></li>
+                                            <li><a href="service_man.html">Для мужчин</a></li>
+                                            <li><a href="news.html">Новости</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-mobile-row__item">
+                                <a href="tel:+79043005888">
+                                    <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="38px" height="38px">
+                                        <path fill-rule="evenodd"  fill="rgb(186, 186, 186)"
+                                              d="M32.871,19.493 L30.968,19.493 C30.968,13.266 25.914,8.204 19.702,8.204 L19.701,6.298 C26.963,6.295 32.871,12.215 32.871,19.493 ZM19.701,9.589 L19.700,11.495 C24.102,11.495 27.682,15.083 27.680,19.492 L29.584,19.490 C29.584,14.031 25.151,9.589 19.701,9.589 ZM19.320,0.593 C9.027,0.593 0.654,8.983 0.654,19.298 C0.654,29.612 9.027,38.002 19.320,38.002 C19.956,38.002 20.471,37.486 20.471,36.850 C20.471,36.211 19.956,35.694 19.320,35.694 C10.296,35.694 2.957,28.338 2.957,19.298 C2.957,10.256 10.296,2.900 19.320,2.900 C28.345,2.900 35.684,10.257 35.684,19.298 C35.684,23.076 33.677,26.821 30.805,28.407 C29.762,28.982 28.631,29.267 27.423,29.278 C28.148,28.847 28.776,28.263 29.242,27.526 C29.334,27.387 29.453,27.267 29.513,27.116 C29.888,26.212 29.921,25.187 30.148,24.232 C30.425,23.014 24.825,20.634 24.338,22.154 C24.162,22.717 23.892,24.500 23.539,24.969 C23.223,25.388 22.450,25.189 21.966,24.777 C20.689,23.686 19.262,22.084 18.012,20.818 L18.014,20.817 C17.982,20.783 17.943,20.746 17.909,20.711 C17.873,20.679 17.838,20.640 17.803,20.606 L17.803,20.608 C16.539,19.354 14.939,17.929 13.852,16.647 C13.440,16.162 13.242,15.385 13.660,15.071 C14.128,14.714 15.907,14.448 16.469,14.270 C17.985,13.785 15.612,8.168 14.394,8.448 C13.443,8.671 12.420,8.708 11.518,9.081 C11.365,9.146 11.246,9.264 11.108,9.356 C7.909,11.387 7.496,16.321 10.618,19.995 C11.808,21.402 13.050,22.762 14.327,24.090 L14.320,24.095 C14.356,24.131 14.392,24.164 14.429,24.198 C14.463,24.234 14.496,24.269 14.530,24.307 L14.536,24.301 C15.862,25.580 17.434,27.467 19.987,29.173 C25.362,32.771 29.488,31.767 31.916,30.432 C36.110,28.117 37.986,23.172 37.986,19.301 C37.986,8.983 29.613,0.593 19.320,0.593 Z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <header class="header">
+                    <div class="container">
+                        <div class="header-nav">
+                            <div class="header-nav__left">
+                                <ul>
+                                    <li><a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="36px" height="14px">
+                                            <path fill-rule="evenodd"  fill="rgb(132, 222, 225)"
+                                                  d="M35.000,8.000 L1.000,8.000 C0.448,8.000 -0.000,7.552 -0.000,7.000 C-0.000,6.448 0.448,6.000 1.000,6.000 L35.000,6.000 C35.552,6.000 36.000,6.448 36.000,7.000 C36.000,7.552 35.552,8.000 35.000,8.000 ZM35.000,2.000 L1.000,2.000 C0.448,2.000 -0.000,1.552 -0.000,1.000 C-0.000,0.448 0.448,-0.000 1.000,-0.000 L35.000,-0.000 C35.552,-0.000 36.000,0.448 36.000,1.000 C36.000,1.552 35.552,2.000 35.000,2.000 ZM1.000,12.000 L35.000,12.000 C35.552,12.000 36.000,12.448 36.000,13.000 C36.000,13.552 35.552,14.000 35.000,14.000 L1.000,14.000 C0.448,14.000 -0.000,13.552 -0.000,13.000 C-0.000,12.448 0.448,12.000 1.000,12.000 Z"/>
+                                        </svg>
+                                    </a></li>
+                                    <li><a href="about.html">О хирурге</a></li>
+                                    <li><a class="active" href="contacts.html">график работы</a></li>
+                                    <li><a href="portfolio.html">портфолио</a></li>
+                                </ul>
+                            </div>
+                            <a class="header-nav__link-logo" href="index.html">
+                                <div class="header-nav__logo">
+                                    <span class="header-nav__name">Попугаев Павел Вадимович</span>
+                                    <span class="header-nav__desc">пластический хирург, к. м. н.</span>
+                                </div>
+                            </a>
+                            <div class="header-nav__right">
+                                <ul>
+                                    <li><a href="service.html">услуги и цены</a></li>
+                                    <li><a href="service_man.html">для мужчин</a></li>
+                                    <li><a class="active" href="news.html">новости</a></li>
+                                    <li><a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px">
+                                            <path fill-rule="evenodd"  fill="rgb(190, 190, 190)"
+                                                  d="M29.334,17.177 L27.601,17.177 C27.601,11.522 23.001,6.924 17.347,6.924 L17.346,5.193 C23.956,5.190 29.334,10.568 29.334,17.177 ZM17.346,8.182 L17.345,9.913 C21.351,9.913 24.610,13.172 24.608,17.177 L26.341,17.176 C26.341,12.217 22.306,8.182 17.346,8.182 ZM17.000,0.011 C7.631,0.011 0.011,7.631 0.011,17.001 C0.011,26.368 7.631,33.989 17.000,33.989 C17.579,33.989 18.047,33.520 18.047,32.942 C18.047,32.362 17.579,31.893 17.000,31.893 C8.787,31.893 2.107,25.211 2.107,17.001 C2.107,8.788 8.787,2.107 17.000,2.107 C25.214,2.107 31.893,8.789 31.893,17.001 C31.893,20.432 30.067,23.834 27.452,25.274 C26.503,25.796 25.474,26.055 24.374,26.066 C25.035,25.674 25.606,25.143 26.030,24.474 C26.113,24.348 26.222,24.238 26.277,24.101 C26.618,23.280 26.648,22.349 26.855,21.481 C27.107,20.375 22.010,18.214 21.567,19.595 C21.406,20.106 21.161,21.725 20.840,22.152 C20.552,22.532 19.848,22.351 19.407,21.977 C18.245,20.987 16.947,19.531 15.809,18.381 L15.811,18.380 C15.782,18.350 15.747,18.316 15.715,18.284 C15.683,18.254 15.651,18.220 15.618,18.188 L15.618,18.190 C14.468,17.052 13.012,15.757 12.023,14.593 C11.648,14.152 11.468,13.447 11.848,13.161 C12.275,12.837 13.893,12.596 14.405,12.433 C15.784,11.993 13.625,6.892 12.516,7.145 C11.650,7.348 10.719,7.381 9.899,7.721 C9.760,7.780 9.651,7.887 9.525,7.970 C6.614,9.815 6.238,14.296 9.080,17.634 C10.163,18.912 11.293,20.147 12.455,21.353 L12.449,21.358 C12.481,21.390 12.515,21.421 12.548,21.451 C12.579,21.483 12.609,21.516 12.640,21.550 L12.646,21.544 C13.853,22.706 15.283,24.420 17.606,25.970 C22.498,29.238 26.254,28.326 28.464,27.113 C32.281,25.010 33.989,20.520 33.989,17.003 C33.989,7.631 26.367,0.011 17.000,0.011 Z"/>
+                                        </svg>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- /HEADER -->
+
+                <!-- PORTFOLIO -->
+                <section class="portfolio">
+                    <div id="fullpage">
+                        <div class="vertical-scrolling">
+                            <div class="swiper-container">
+                                <section id="myMenu" class="service_slide swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="index.html" class="service_slide__item">
+                                            <img src="images/glyuteoplastika.jpg" alt="" class="service_slide__pics">
+                                            <div class="service_slide__text">
+                                                <h2>глютеопластика</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#Omolozhenie-lica" class="service_slide__item">
+                                            <img src="images/omolozhenie_lica.jpg" alt="" class="service_slide__pics">
+                                            <div class="service_slide__text">
+                                                <h2>Омоложение лица</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="index.html" class="service_slide__item">
+                                            <img src="images/korrekciya-formy-tela.jpg" alt="" class="service_slide__pics">
+                                            <div class="service_slide__text">
+                                                <h2>коррекция формы тела</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </section>
+                                <div class="container">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Omolozhenie-lica" class="vertical-scrolling">
+                            <div class="portfolio_add">
+                                <div class="container">
+                                    <div class="portfolio_list">
+                                        <a data-fancybox="gallery" data-src="#portfolio01" href="javascript:;"><img src="images/portfolio01.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio02" href="javascript:;"><img src="images/portfolio02.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio03" href="javascript:;"><img src="images/portfolio03.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio04" href="javascript:;"><img src="images/portfolio04.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio05" href="javascript:;"><img src="images/portfolio05.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio06" href="javascript:;"><img src="images/portfolio06.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio07" href="javascript:;"><img src="images/portfolio07.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio08" href="javascript:;"><img src="images/portfolio08.jpg" alt=""></a>
+                                        <a data-fancybox="gallery" data-src="#portfolio09" href="javascript:;"><img src="images/portfolio09.jpg" alt=""></a>
+                                    </div>
+                                    <div style="display: none;" id="portfolio01">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio02">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle2.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio03">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio04">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle2.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio05">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio06">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle2.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio07">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio08">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle2.jpg" alt="">
+                                    </div>
+                                    <div style="display: none;" id="portfolio09">
+                                        <h2>Омоложение лица</h2>
+                                        <img src="images/portfolio_do_posle.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vertical-scrolling fp-auto-height">
+                            <!-- FOOTER -->
+                            <footer class="footer">
+                                <div class="footer__wrap">
+                                    <div class="container">
+                                        <div class="footer__nav">
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title">О хирурге</a>
+                                                <ul>
+                                                    <li><a href="">О себе</a></li>
+                                                    <li><a href="">Лицензии</a></li>
+                                                    <li><a href="">Научные конференции</a></li>
+                                                    <li><a href="">Новости</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title">график работы</a>
+                                                <ul>
+                                                    <li><a href="">О себе</a></li>
+                                                    <li><a href="">Клиника 1</a></li>
+                                                    <li><a href="">Клиника 2</a></li>
+                                                    <li><a href="">Клиника 3</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title active">Услуги и Цены</a>
+                                                <ul>
+                                                    <li><a href="">Увеличение груди</a></li>
+                                                    <li><a href="">Моноблоки</a></li>
+                                                    <li><a href="">Маммопластика</a></li>
+                                                    <li><a href="">Омоложение лица</a></li>
+                                                    <li><a href="">Глютеопластика</a></li>
+                                                    <li><a href="">Коррекция формы тела</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title">портфолио</a>
+                                                <ul>
+                                                    <li><a href="">Увеличение груди</a></li>
+                                                    <li><a href="">Моноблоки</a></li>
+                                                    <li><a href="">Маммопластика</a></li>
+                                                    <li><a href="">Омоложение лица</a></li>
+                                                    <li><a href="">Глютеопластика</a></li>
+                                                    <li><a href="">Коррекция формы тела</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title">пациентам</a>
+                                                <ul>
+                                                    <li><a href="">Иногородним</a></li>
+                                                    <li><a href="">Подготовка к операции</a></li>
+                                                    <li><a href="">Рекомендации после операций</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="" class="footer__nav-title">Контакты</a>
+                                            </div>
+                                            <div class="footer__nav-item">
+                                                <a href="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px">
+                                                        <path fill-rule="evenodd"  fill="rgb(190, 190, 190)"
+                                                              d="M29.334,17.178 L27.601,17.178 C27.601,11.522 23.001,6.924 17.347,6.924 L17.346,5.193 C23.956,5.190 29.334,10.567 29.334,17.178 ZM17.346,8.182 L17.345,9.913 C21.351,9.913 24.610,13.172 24.608,17.176 L26.341,17.175 C26.341,12.217 22.306,8.182 17.346,8.182 ZM17.000,0.011 C7.631,0.011 0.011,7.631 0.011,17.001 C0.011,26.368 7.631,33.989 17.000,33.989 C17.579,33.989 18.047,33.520 18.047,32.942 C18.047,32.362 17.579,31.893 17.000,31.893 C8.787,31.893 2.107,25.211 2.107,17.001 C2.107,8.788 8.787,2.107 17.000,2.107 C25.214,2.107 31.893,8.789 31.893,17.001 C31.893,20.432 30.067,23.834 27.452,25.274 C26.503,25.796 25.474,26.055 24.374,26.066 C25.035,25.673 25.606,25.143 26.030,24.474 C26.113,24.348 26.222,24.238 26.277,24.101 C26.618,23.280 26.648,22.349 26.855,21.482 C27.107,20.375 22.010,18.214 21.567,19.595 C21.406,20.106 21.161,21.725 20.840,22.152 C20.552,22.532 19.848,22.351 19.407,21.977 C18.245,20.987 16.947,19.531 15.809,18.381 L15.811,18.380 C15.782,18.350 15.747,18.316 15.715,18.284 C15.683,18.254 15.651,18.220 15.618,18.188 L15.618,18.190 C14.468,17.052 13.012,15.757 12.023,14.593 C11.648,14.152 11.468,13.447 11.848,13.161 C12.275,12.837 13.893,12.596 14.405,12.434 C15.784,11.992 13.625,6.892 12.516,7.145 C11.650,7.349 10.719,7.381 9.899,7.721 C9.760,7.780 9.651,7.887 9.525,7.970 C6.614,9.815 6.238,14.296 9.080,17.634 C10.163,18.911 11.293,20.147 12.455,21.353 L12.449,21.357 C12.481,21.390 12.515,21.420 12.548,21.451 C12.579,21.484 12.609,21.516 12.640,21.551 L12.646,21.544 C13.853,22.706 15.283,24.420 17.606,25.970 C22.498,29.238 26.254,28.326 28.464,27.113 C32.281,25.010 33.989,20.519 33.989,17.003 C33.989,7.631 26.367,0.011 17.000,0.011 Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="footer__copy">
+                                            <div class="footer__copy-item">
+                                                <p class="footer__copy-title">© Попугаев Павел Вадимович | 2018 <br> Пластический хирург, кандидат медицинских наук.</p>
+                                                <p class="footer__copy-desc"><a href="">Условия копирования и цитирования материалов сайта.</a><br>
+                                                    Все права защищены. Полное или частичное копирование материалов нашего сайта <br>
+                                                    разрешено только с письменного согласия администрации сайта.</p>
+                                            </div>
+                                            <div class="footer__copy-item">
+                                                <a href=""><img src="images/logo_luxar.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer__protect">
+                                    <div class="container">
+                                        <p class="footer__protect-title">МОГУТ БЫТЬ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА.</p>
+                                    </div>
+                                </div>
+                            </footer>
+                            <!-- /FOOTER -->
+                        </div>
+                        <div class="footer__logo-mobile">
+                            <a href=""><img src="images/logo_luxar.png" alt=""></a>
+                        </div>
+                    </div>
+                </section>
+                <!-- /PORTFOLIO -->
+
+            </div>
+        </div>
+    </div>
+</body>

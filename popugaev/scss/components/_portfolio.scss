@@ -1,0 +1,65 @@
+.portfolio {
+
+  background-color: #000000;
+
+  .service_slide__item::before {
+    height: 100px;
+  }
+
+  .service_slide__pics {
+    top: 180px;
+  }
+
+  .service_slide__text {
+    top: 90px;
+
+    h2 {
+      background: black;
+      padding: 20px 10px;
+    }
+  }
+
+  .swiper-slide-active {
+    .service_slide__text {
+      h2 {
+        color: #77dde1;
+      }
+    }
+  }
+
+  &_list {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    width: calc(100% + 12px);
+
+    @media #{$phone} {
+      width: 100%;
+    }
+
+    a {
+      width: 394px;
+      height: 297px;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin: 5px;
+
+
+      img {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: grayscale(100%);
+        display: block;
+        transition: .9s all linear;
+
+        &:hover {
+          filter: grayscale(0);
+          transform: translateX(-50%) scale(1.1);
+        }
+      }
+
+    }
+  }
+}

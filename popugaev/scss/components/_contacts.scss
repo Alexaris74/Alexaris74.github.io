@@ -1,0 +1,129 @@
+.contacts {
+  width: 100%;
+  position: relative;
+  background-color: #000000;
+
+  &__map {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: .5s filter;
+
+    @media #{$phone} {
+      position: relative;
+      height: 300px;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    }
+
+  }
+
+  &__nav {
+    list-style: none;
+    padding-left: 0!important;
+    margin-top: 17px;
+    @include flexbox();
+    @include align-items(center);
+
+    @media #{$phone} {
+      @include justify-content(space-between);
+    }
+
+    a {
+      color: #ffffff;
+      font-size: 18px;
+      background-color: #000000;
+      border: 2px solid #ffffff;
+      border-radius: 50px;
+      text-decoration: none;
+      padding: 12px 15px;
+      display: inline-block;
+      margin-right: 4px;
+
+      &:hover {
+        color: #84dee1;
+        border: 2px solid #84dee1;
+      }
+    }
+
+    .active {
+      color: #84dee1;
+      border: 2px solid #84dee1;
+    }
+  }
+
+  &__address {
+    list-style: none;
+    padding-left: 0!important;
+
+    li {
+      @include flexbox();
+      @include align-items(center);
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      color: #ffffff;
+
+      span {
+        color: #a0a0a0;
+      }
+
+      b {
+        color: #84dde0;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__left {
+    width: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    @include flexbox();
+    @include justify-content(flex-end);
+    position: relative;
+    z-index: 5;
+
+    @media #{$phone} {
+      width: 100%;
+    }
+  }
+
+  &__left-block {
+    width: 610px;
+    padding-right: 20px;
+
+    @media #{$phone} {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    p {
+      line-height: 18px;
+    }
+  }
+
+  span.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ededed;
+    opacity: 1;
+    background: transparent;
+  }
+
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #84dde0;
+    border: none;
+  }
+
+}

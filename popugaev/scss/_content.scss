@@ -1,0 +1,81 @@
+.content {
+
+	h1 {
+		font-size: 48px;
+		color: #77ebf0;
+		text-transform: uppercase;
+		margin-left: 20px;
+
+		@media #{$phone} {
+			font-size: 34px;
+			text-align: center;
+		}
+	}
+
+	&__back {
+		font-size: 18px;
+		color: #9a9a9a;
+		text-decoration: none;
+		padding-left: 23px;
+		position: relative;
+		display: block;
+		margin-top: 18px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			border: 1px solid #9a9a9a;
+			transform: rotate(45deg) translateY(-50%);
+			left: 0;
+			top: 50%;
+			border-top: none;
+			border-right: none;
+		}
+	}
+
+	b {
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	p {
+		color: #b0b0b0;
+		line-height: 24px;
+	}
+
+	h2 {
+		font-size: 42px;
+
+		@media #{$phone} {
+			font-size: 34px;
+		}
+
+		span {
+			display: block;
+			font-size: 16px;
+			color: #8b8b8c;
+			line-height: 22px;
+		}
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	ul {
+		padding-left: 17px;
+	}
+
+	li {
+		color: #c8c8c8;
+		line-height: 24px;
+
+		span {
+			color: #84dee1;
+		}
+	}
+
+
+}

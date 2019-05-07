@@ -1,0 +1,36 @@
+@import "fonts";
+@import "variables";
+
+
+// Mixins
+@import "mixins/gradients";
+@import "mixins/vendor-prefixes";
+@import "mixins/clearfix";
+@import "mixins/flex";
+
+@import "mixins/grid-mixins";
+@import "mixins/visibility-mixins";
+
+@import "layout";
+@import "header";
+@import "footer";
+@import "content";
+@import "tabs";
+
+
+@import "components/scroll_service-1";
+@import "components/scroll_service-2";
+@import "components/service_slide";
+@import "components/index_about";
+@import "components/add_info";
+@import "components/news";
+@import "components/news_list";
+@import "components/about";
+@import "components/service";
+@import "components/contacts";
+@import "components/scroll_block";
+@import "components/portfolio";
+
+
+
+
