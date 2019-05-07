@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="js/fancybox3/jquery.fancybox.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/slick/slick.js"></script>
+
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.touchwipe.js"></script>
+    <script src="js/fancybox3/jquery.fancybox.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="js/swiper.js"></script>
+
+
+    <!--    <script src="script.js"></script>-->
+    <!--    <script src="blocks.js"></script>-->
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        $(function(){
+
+            $('.index_question').mousemove(function(e) {
+                var xpos=e.clientX;
+                var ypos=e.clientY;
+                var  xpos=xpos*2;ypos=ypos*2;
+                $('.index_question__door').css('top',((-80+(ypos/150))+"px"));
+                $('.index_question__door').css('left',(( -260+(xpos/180))+"px"));
+
+                $('.index_question__man').css('right',(( -75+(xpos/180))+"px"));
+
+            });
+
+            if ($('#js-yamap').length) {
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('js-yamap', {
+                        center: [
+                            55.205723, 61.386258
+                        ],
+                        zoom: 17,
+                        controls: ['zoomControl'],
+                    });
+
+                    myMap.geoObjects.add(new ymaps.Placemark(myMap.getCenter(), {}, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'images/pin_map.png',
+                        iconImageSize: [43, 55],
+                        iconImageOffset: [-10, -87],
+                        cursor: 'default'
+                    }));
+                    myMap.behaviors.disable('scrollZoom');
+                })
+            };
+
+            if ($('#js-yamap2').length) {
+                ymaps.ready(function () {
+                    var myMap2 = new ymaps.Map('js-yamap2', {
+                        center: [
+                            55.205723, 61.386258
+                        ],
+                        zoom: 17,
+                        controls: ['zoomControl'],
+                    });
+
+                    myMap2.geoObjects.add(new ymaps.Placemark(myMap2.getCenter(), {}, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'images/pin_map.png',
+                        iconImageSize: [43, 55],
+                        iconImageOffset: [-10, -87],
+                        cursor: 'default'
+                    }));
+                    myMap2.behaviors.disable('scrollZoom');
+                })
+            };
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                // Optional parameters
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction'
+                },
+                slidesPerView: 4,
+                direction: 'horizontal',
+                loop: false
+            });
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body class="index_page">
+<div id="panel"><!-- Bitrix panel --></div>
+<div id="html">
+    <div class="wrapper">
+        <div class="inner">
+
+            <!-- HEADER -->
+            <header class="header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="header-top__menu">
+                            <ul class="header-top__list">
+                                <li><a href="">О компании</a></li>
+                                <li><a href="">Производство</a></li>
+                                <li><a href="">Сертификаты</a></li>
+                            </ul>
+                            <p class="header-top__address">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="19px">
+                                    <path fill-rule="evenodd"  fill="rgb(178, 185, 195)"
+                                          d="M14.867,9.053 C14.863,9.081 14.847,9.163 14.816,9.304 C14.702,9.813 14.533,10.307 14.314,10.781 C13.506,12.682 11.726,15.601 7.833,18.728 C7.735,18.807 7.618,18.846 7.500,18.846 C7.382,18.846 7.265,18.807 7.167,18.728 C3.270,15.601 1.494,12.682 0.686,10.781 C0.466,10.307 0.298,9.809 0.184,9.304 C0.153,9.163 0.137,9.081 0.133,9.053 C0.043,8.591 -0.000,8.117 -0.000,7.646 C-0.000,3.516 3.364,0.154 7.496,0.154 C11.628,0.154 14.992,3.516 15.000,7.646 C15.000,8.117 14.953,8.591 14.867,9.053 ZM7.496,1.208 C3.948,1.208 1.058,4.096 1.058,7.642 C1.058,8.054 1.098,8.461 1.176,8.865 C1.176,8.877 1.180,8.885 1.180,8.893 C1.184,8.912 1.192,8.971 1.215,9.061 C1.215,9.065 1.215,9.065 1.215,9.069 C1.317,9.508 1.462,9.939 1.650,10.346 C1.654,10.350 1.654,10.358 1.658,10.362 C2.392,12.098 3.999,14.747 7.496,17.635 C10.993,14.747 12.601,12.098 13.334,10.362 C13.338,10.358 13.338,10.350 13.342,10.346 C13.534,9.935 13.679,9.508 13.777,9.069 C13.777,9.065 13.777,9.065 13.777,9.061 C13.796,8.971 13.808,8.912 13.812,8.893 C13.812,8.885 13.816,8.877 13.816,8.869 C13.894,8.469 13.934,8.058 13.934,7.642 C13.934,4.096 11.044,1.208 7.496,1.208 ZM7.496,12.486 C4.873,12.486 2.737,10.350 2.737,7.729 C2.737,5.107 4.873,2.971 7.496,2.971 C10.119,2.971 12.256,5.107 12.256,7.729 C12.256,10.350 10.119,12.486 7.496,12.486 ZM7.496,4.030 C5.457,4.030 3.795,5.691 3.795,7.729 C3.795,9.766 5.453,11.428 7.496,11.428 C9.539,11.428 11.197,9.766 11.197,7.729 C11.197,5.691 9.535,4.030 7.496,4.030 Z"/>
+                                </svg>
+                                <span>г. Челябинск, Свердловский тр. 5/9 сектор 27</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-main">
+                    <div class="container">
+                        <div class="header-main__block">
+                            <div class="header-main__logo">
+                                <a href=""><img src="images/logo.png" alt=""></a>
+                            </div>
+                            <div class="header-main__right">
+                                <div class="header-main__add">
+                                    <div class="header-main__search">
+                                        <form action="/search/">
+                                            <input type="text" name="q" value="" placeholder="Поиск" maxlength="50" autocomplete="off"><input name="s" type="submit" value="">
+                                        </form>
+                                    </div>
+                                    <div class="header-main__payment">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="39px">
+                                            <path fill-rule="evenodd"  fill="rgb(237, 157, 11)"
+                                                  d="M29.982,38.410 L3.018,38.410 C1.354,38.410 -0.000,37.056 -0.000,35.393 L-0.000,3.607 C-0.000,1.943 1.354,0.590 3.018,0.590 L29.982,0.590 C31.646,0.590 33.000,1.943 33.000,3.607 L33.000,35.393 C33.000,37.056 31.646,38.410 29.982,38.410 ZM31.793,3.607 C31.793,2.609 30.980,1.797 29.982,1.797 L3.018,1.797 C2.020,1.797 1.207,2.609 1.207,3.607 L1.207,35.393 C1.207,36.391 2.020,37.203 3.018,37.203 L29.982,37.203 C30.980,37.203 31.793,36.391 31.793,35.393 L31.793,3.607 ZM29.982,35.191 L25.052,35.191 C24.718,35.191 24.448,34.921 24.448,34.588 L24.448,22.316 C24.448,21.983 24.718,21.713 25.052,21.713 L29.982,21.713 C30.315,21.713 30.585,21.983 30.585,22.316 L30.585,24.730 C30.585,25.064 30.315,25.334 29.982,25.334 C29.648,25.334 29.378,25.064 29.378,24.730 L29.378,22.920 L25.655,22.920 L25.655,33.984 L29.378,33.984 L29.378,27.144 C29.378,26.811 29.648,26.541 29.982,26.541 C30.315,26.541 30.585,26.811 30.585,27.144 L30.585,34.588 C30.585,34.921 30.315,35.191 29.982,35.191 ZM29.982,20.506 L25.052,20.506 C24.718,20.506 24.448,20.235 24.448,19.902 L24.448,17.488 C24.448,17.155 24.718,16.885 25.052,16.885 L29.982,16.885 C30.315,16.885 30.585,17.155 30.585,17.488 L30.585,19.902 C30.585,20.235 30.315,20.506 29.982,20.506 ZM29.378,18.092 L25.655,18.092 L25.655,19.299 L29.378,19.299 L29.378,18.092 ZM25.152,6.222 L27.567,6.222 C27.900,6.222 28.171,6.493 28.171,6.826 C28.171,7.159 27.900,7.430 27.567,7.430 L25.152,7.430 C24.819,7.430 24.549,7.159 24.549,6.826 C24.549,6.493 24.819,6.222 25.152,6.222 ZM25.152,11.051 L27.567,11.051 C27.900,11.051 28.171,11.321 28.171,11.654 C28.171,11.988 27.900,12.258 27.567,12.258 L25.152,12.258 C24.819,12.258 24.549,11.988 24.549,11.654 C24.549,11.321 24.819,11.051 25.152,11.051 ZM24.549,8.435 C24.549,8.102 24.819,7.832 25.152,7.832 C25.486,7.832 25.756,8.102 25.756,8.435 L25.756,10.045 C25.756,10.378 25.486,10.648 25.152,10.648 C24.819,10.648 24.549,10.378 24.549,10.045 L24.549,8.435 ZM29.982,14.873 L10.363,14.873 C10.029,14.873 9.759,14.603 9.759,14.269 C9.759,13.936 10.029,13.666 10.363,13.666 L29.378,13.666 L29.378,5.016 L3.622,5.016 L3.622,13.666 L7.948,13.666 C8.282,13.666 8.552,13.936 8.552,14.269 C8.552,14.603 8.282,14.873 7.948,14.873 L3.018,14.873 C2.685,14.873 2.415,14.603 2.415,14.269 L2.415,4.412 C2.415,4.079 2.685,3.808 3.018,3.808 L29.982,3.808 C30.315,3.808 30.585,4.079 30.585,4.412 L30.585,14.269 C30.585,14.603 30.315,14.873 29.982,14.873 ZM3.018,21.713 L7.948,21.713 C8.282,21.713 8.552,21.983 8.552,22.316 L8.552,27.245 C8.552,27.578 8.282,27.849 7.948,27.849 L3.018,27.849 C2.685,27.849 2.415,27.578 2.415,27.245 L2.415,22.316 C2.415,21.983 2.685,21.713 3.018,21.713 ZM3.622,26.641 L7.345,26.641 L7.345,22.920 L3.622,22.920 L3.622,26.641 ZM3.018,29.056 L7.948,29.056 C8.282,29.056 8.552,29.326 8.552,29.659 L8.552,34.588 C8.552,34.921 8.282,35.191 7.948,35.191 L3.018,35.191 C2.685,35.191 2.415,34.921 2.415,34.588 L2.415,29.659 C2.415,29.326 2.685,29.056 3.018,29.056 ZM3.622,33.984 L7.345,33.984 L7.345,30.263 L3.622,30.263 L3.622,33.984 ZM10.363,21.713 L15.293,21.713 C15.626,21.713 15.896,21.983 15.896,22.316 L15.896,27.245 C15.896,27.578 15.626,27.849 15.293,27.849 L10.363,27.849 C10.029,27.849 9.759,27.578 9.759,27.245 L9.759,22.316 C9.759,21.983 10.029,21.713 10.363,21.713 ZM10.966,26.641 L14.689,26.641 L14.689,22.920 L10.966,22.920 L10.966,26.641 ZM10.363,29.056 L15.293,29.056 C15.626,29.056 15.896,29.326 15.896,29.659 L15.896,34.588 C15.896,34.921 15.626,35.191 15.293,35.191 L10.363,35.191 C10.029,35.191 9.759,34.921 9.759,34.588 L9.759,29.659 C9.759,29.326 10.029,29.056 10.363,29.056 ZM10.966,33.984 L14.689,33.984 L14.689,30.263 L10.966,30.263 L10.966,33.984 ZM17.707,16.885 L22.637,16.885 C22.971,16.885 23.241,17.155 23.241,17.488 L23.241,19.902 C23.241,20.235 22.971,20.506 22.637,20.506 L17.707,20.506 C17.374,20.506 17.104,20.235 17.104,19.902 L17.104,17.488 C17.104,17.155 17.374,16.885 17.707,16.885 ZM18.311,19.299 L22.033,19.299 L22.033,18.092 L18.311,18.092 L18.311,19.299 ZM17.707,21.713 L22.637,21.713 C22.971,21.713 23.241,21.983 23.241,22.316 L23.241,27.245 C23.241,27.578 22.971,27.849 22.637,27.849 L17.707,27.849 C17.374,27.849 17.104,27.578 17.104,27.245 L17.104,22.316 C17.104,21.983 17.374,21.713 17.707,21.713 ZM18.311,26.641 L22.033,26.641 L22.033,22.920 L18.311,22.920 L18.311,26.641 ZM17.707,29.056 L22.637,29.056 C22.971,29.056 23.241,29.326 23.241,29.659 L23.241,34.588 C23.241,34.921 22.971,35.191 22.637,35.191 L17.707,35.191 C17.374,35.191 17.104,34.921 17.104,34.588 L17.104,29.659 C17.104,29.326 17.374,29.056 17.707,29.056 ZM18.311,33.984 L22.033,33.984 L22.033,30.263 L18.311,30.263 L18.311,33.984 Z"/>
+                                        </svg>
+                                        <a href="">Расчет стоимости</a>
+                                    </div>
+                                    <div class="header-main__phone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="33px">
+                                            <path fill-rule="evenodd"  fill="rgb(237, 157, 11)"
+                                                  d="M16.500,0.166 C7.493,0.166 0.167,7.493 0.167,16.500 C0.167,25.505 7.493,32.833 16.500,32.833 C17.056,32.833 17.507,32.382 17.507,31.828 C17.507,31.271 17.056,30.820 16.500,30.820 C8.604,30.820 2.182,24.396 2.182,16.501 C2.182,8.605 8.604,2.181 16.500,2.181 C24.396,2.181 30.818,8.605 30.818,16.501 C30.818,19.800 29.062,23.072 26.549,24.456 C25.637,24.958 24.646,25.206 23.590,25.216 C24.224,24.839 24.773,24.330 25.181,23.685 C25.262,23.565 25.366,23.461 25.419,23.326 C25.747,22.537 25.775,21.643 25.974,20.810 C26.217,19.744 21.316,17.668 20.890,18.996 C20.736,19.488 20.500,21.042 20.191,21.452 C19.915,21.819 19.238,21.646 18.814,21.285 C17.697,20.333 16.449,18.934 15.355,17.828 L15.357,17.828 C15.329,17.798 15.295,17.766 15.265,17.736 C15.234,17.707 15.203,17.673 15.172,17.644 L15.172,17.645 C14.066,16.552 12.666,15.306 11.715,14.186 C11.355,13.762 11.181,13.086 11.547,12.810 C11.957,12.500 13.513,12.267 14.005,12.112 C15.331,11.687 13.255,6.783 12.189,7.028 C11.357,7.223 10.462,7.253 9.673,7.580 C9.539,7.636 9.435,7.740 9.314,7.820 C6.515,9.595 6.154,13.903 8.885,17.112 C9.927,18.339 11.013,19.528 12.131,20.687 L12.125,20.692 C12.156,20.723 12.188,20.752 12.220,20.781 C12.250,20.813 12.279,20.843 12.308,20.876 L12.314,20.871 C13.474,21.988 14.849,23.634 17.083,25.124 C21.786,28.265 25.396,27.389 27.521,26.222 C31.191,24.201 32.833,19.884 32.833,16.504 C32.833,7.493 25.506,0.166 16.500,0.166 Z"/>
+                                        </svg>
+                                        <p><a href="tel:+73512151553">+7 (351) 215-15-53</a>, <a href="+73517777607">+7 (351) 7777-607</a></p>
+                                    </div>
+                                </div>
+                                <div class="header-main__menu">
+                                    <ul class="header-main__list">
+                                        <li><a href="">Каталог</a></li>
+                                        <li class="selected"><a href="">Установка</a></li>
+                                        <li><a href="">Обслуживание</a></li>
+                                        <li><a href="">Портфолио</a></li>
+                                        <li><a href="">Акции</a></li>
+                                        <li><a href="">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- /HEADER -->
+
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <div class="container">
+                    <ul class="breadcrumb__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Акции</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /breadcrumb -->
+
+            <!-- content_block -->
+            <div class="content_block">
+                <div class="container">
+                    <h1>Акции</h1>
+                    <!-- LINE_DECOR -->
+                    <section class="line_decor">
+                        <div class="line_decor__element"></div>
+                    </section>
+                    <!-- /LINE_DECOR -->
+
+                    <!-- stock_list -->
+                    <div class="stock_list">
+                        <div class="stock_list__item">
+                            <a href="" class="stock_list__pics">
+                                <img src="images/akzii01.jpg" alt="">
+                            </a>
+                            <div class="stock_list__text">
+                                <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                                <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                            </div>
+                            <a href="#" class="button">Подробнее</a>
+                        </div>
+                        <div class="stock_list__item">
+                            <a href="" class="stock_list__pics">
+                                <img src="images/akzii02.jpg" alt="">
+                            </a>
+                            <div class="stock_list__text">
+                                <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                                <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                            </div>
+                            <a href="#" class="button">Подробнее</a>
+                        </div>
+                        <div class="stock_list__item">
+                            <a href="" class="stock_list__pics">
+                                <img src="images/akzii03.jpg" alt="">
+                            </a>
+                            <div class="stock_list__text">
+                                <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                                <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                            </div>
+                            <a href="#" class="button">Подробнее</a>
+                        </div>
+                        <div class="stock_list__item">
+                        <a href="" class="stock_list__pics">
+                            <img src="images/akzii01.jpg" alt="">
+                        </a>
+                        <div class="stock_list__text">
+                            <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                            <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                        </div>
+                         <a href="#" class="button">Подробнее</a>
+                    </div>
+                    <div class="stock_list__item">
+                        <a href="" class="stock_list__pics">
+                            <img src="images/akzii02.jpg" alt="">
+                        </a>
+                        <div class="stock_list__text">
+                            <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                            <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                        </div>
+                        <a href="#" class="button">Подробнее</a>
+                    </div>
+                    <div class="stock_list__item">
+                        <a href="" class="stock_list__pics">
+                            <img src="images/akzii03.jpg" alt="">
+                        </a>
+                        <div class="stock_list__text">
+                            <a href="" class="stock_list__title">Внимание распродажа, двери в наличии за 8000 руб</a>
+                            <p class="stock_list__anons">Для того, чтобы в полной мере использовать функциональность и срок службы той или иной двери, нужно ее правильно установить. Будь то</p>
+                        </div>
+                        <a href="#" class="button">Подробнее</a>
+                    </div>
+                    </div>
+                    <!-- stock_list -->
+
+                </div>
+            </div>
+            <!-- /content_block -->
+
+            <!-- INDEX_ADVANTAGES -->
+            <section class="index_advantages">
+                <div class="container">
+                    <div class="index_advantages__list">
+                        <div class="index_advantages__item">
+                            <div class="index_advantages__icon">
+                                <img src="images/advantages/advantages__icon-1.png" alt="Новейшие технические разработки" title="Новейшие технические разработки">
+                            </div>
+                            <p>Новейшие технические разработки</p>
+                        </div>
+                        <div class="index_advantages__item">
+                            <div class="index_advantages__icon">
+                                <img src="images/advantages/advantages__icon-2.png" alt="Качественные, прочные металлы" title="Качественные, прочные металлы">
+                            </div>
+                            <p>Качественные, прочные металлы</p>
+                        </div>
+                        <div class="index_advantages__item">
+                            <div class="index_advantages__icon">
+                                <img src="images/advantages/advantages__icon-3.png" alt="Огнестойкие уплотнители" title="Огнестойкие уплотнители">
+                            </div>
+                            <p>Огнестойкие уплотнители</p>
+                        </div>
+                        <div class="index_advantages__item">
+                            <div class="index_advantages__icon">
+                                <img src="images/advantages/advantages__icon-4.png" alt="Минеральная теплоизоляция" title="Минеральная теплоизоляция">
+                            </div>
+                            <p>Минеральная теплоизоляция</p>
+                        </div>
+                        <div class="index_advantages__item">
+                            <div class="index_advantages__icon">
+                                <img src="images/advantages/advantages__icon-5.png" alt="Собственное производство" title="Собственное производство">
+                            </div>
+                            <p>Собственное производство</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /INDEX_ADVANTAGES -->
+
+            <!-- ADDRESS_FOOTER -->
+            <section class="address_footer">
+                <div class="container">
+                    <div class="address_footer__text">
+                        <span>г. Челябинск</span>
+                        <p>Свердловский тракт  5/9, сектор 27</p>
+                    </div>
+                </div>
+
+                <!-- LINE_DECOR -->
+                <section class="line_decor">
+                    <div class="container">
+                        <div class="line_decor__element"></div>
+                    </div>
+                </section>
+                <!-- /LINE_DECOR -->
+
+                <div id="js-yamap" class="address_footer__map">
+
+                </div>
+            </section>
+            <!-- /ADDRESS_FOOTER -->
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="footer-top__phone">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="33px">
+                                <path fill-rule="evenodd"  fill="rgb(237, 157, 11)"
+                                      d="M16.500,0.166 C7.493,0.166 0.167,7.493 0.167,16.500 C0.167,25.505 7.493,32.833 16.500,32.833 C17.056,32.833 17.507,32.382 17.507,31.827 C17.507,31.271 17.056,30.820 16.500,30.820 C8.604,30.820 2.182,24.396 2.182,16.501 C2.182,8.605 8.604,2.181 16.500,2.181 C24.396,2.181 30.818,8.605 30.818,16.501 C30.818,19.800 29.062,23.072 26.549,24.457 C25.637,24.958 24.646,25.206 23.590,25.216 C24.224,24.839 24.773,24.329 25.181,23.685 C25.262,23.565 25.366,23.461 25.419,23.326 C25.747,22.537 25.775,21.643 25.974,20.810 C26.217,19.744 21.316,17.668 20.890,18.996 C20.736,19.488 20.500,21.042 20.191,21.453 C19.915,21.819 19.238,21.646 18.814,21.285 C17.697,20.333 16.449,18.934 15.355,17.828 L15.357,17.828 C15.329,17.798 15.295,17.766 15.265,17.736 C15.234,17.707 15.203,17.673 15.172,17.644 L15.172,17.645 C14.066,16.552 12.666,15.306 11.715,14.186 C11.355,13.762 11.181,13.086 11.547,12.810 C11.957,12.500 13.513,12.267 14.005,12.112 C15.331,11.687 13.255,6.783 12.189,7.028 C11.357,7.223 10.462,7.253 9.673,7.580 C9.539,7.636 9.435,7.740 9.314,7.820 C6.515,9.595 6.154,13.903 8.886,17.112 C9.927,18.339 11.013,19.528 12.131,20.687 L12.125,20.692 C12.156,20.723 12.188,20.752 12.220,20.781 C12.250,20.813 12.279,20.843 12.308,20.876 L12.314,20.871 C13.474,21.988 14.849,23.634 17.083,25.124 C21.786,28.265 25.396,27.389 27.521,26.222 C31.191,24.201 32.833,19.884 32.833,16.504 C32.833,7.493 25.506,0.166 16.500,0.166 Z"/>
+                            </svg>
+                                <span>+7 (351) 215-15-53</span><span>+7 (351) 7777-607</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom__nav">
+                            <div class="footer-bottom__col">
+                                <ul>
+                                    <li><a href="">О компании</a></li>
+                                    <li><a href="">Каталог</a></li>
+                                    <li><a class="active" href="">Установка</a></li>
+                                    <li><a href="">Обслуживание</a></li>
+                                    <li><a href="">Портфолио</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-bottom__col">
+                                <ul>
+                                    <li><a href="">Акции</a></li>
+                                    <li><a href="">Производство</a></li>
+                                    <li><a href="">Сертификаты</a></li>
+                                    <li><a href="">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom__copy">
+                            <a href=""><img src="images/logo_stroy.png" alt=""></a>
+                            <span>© 2014-2017, OOO «Строй Дом»</span>
+                        </div>
+                        <div class="footer-bottom__logo">
+                            <a href=""><img src="images/logo_luxar.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /FOOTER -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.breadcrumb {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    @include flexbox();
+
+    li:not(:last-child) {
+      position: relative;
+      padding-right: 20px;
+
+      &:before {
+        content: '>';
+        position: absolute;
+        right: 5px;
+      }
+    }
+
+    li a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #768493;
+      font-family: 'Uni Sans', Arial, sans-serif;
+
+      &:hover {
+        color: #ffbc42;
+      }
+    }
+  }
+}

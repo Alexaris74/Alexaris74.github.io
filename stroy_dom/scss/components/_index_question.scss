@@ -1,0 +1,114 @@
+.index_question {
+  min-height: 386px;
+  background-image: url(../images/index_advantages_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 30px 0;
+  padding: 20px 0;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, .4);
+  margin-bottom: 60px;
+
+  &__door {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 487px;
+    left: -260px;
+    top: -80px;
+  }
+
+  &__man {
+    content: '';
+    position: absolute;
+    width: 397px;
+    height: 466px;
+    right: -75px;
+    top: -78px;
+  }
+
+  &__payment {
+
+    a {
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 18px;
+   }
+  }
+
+  &__block {
+    border: 1px solid #9bbdcf;
+    padding-bottom: 40px;
+    padding-left: 90px;
+    width: 866px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-top: 14px;
+
+    //&::before {
+    //  content: '';
+    //  position: absolute;
+    //  background-image: url(../images/door_left.png);
+    //  width: 420px;
+    //  height: 487px;
+    //  left: -260px;
+    //  top: -80px;
+    //}
+
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  background-image: url(../images/man_question.png);
+    //  width: 397px;
+    //  height: 466px;
+    //  right: -75px;
+    //  top: -78px;
+    //}
+
+    .button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -21px;
+      border-color: #8eaad0;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #ffb431;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='phone']{
+    background-color: rgba(37, 47, 58, .5);
+    min-width: 440px;
+    min-height: 40px;
+    border: 1px solid #9bbdcf;
+    margin-bottom: 10px;
+    padding-left: 13px;
+    z-index: 100;
+    position: relative;
+  }
+
+  input[type='text']::placeholder,
+  input[type='email']::placeholder,
+  input[type='phone']::placeholder {
+    font-family: 'Uni Sans', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: #d9e9ff;
+    text-transform: uppercase;
+  }
+}

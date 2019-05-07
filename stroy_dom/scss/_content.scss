@@ -1,0 +1,238 @@
+.page {
+	overflow: hidden;
+	min-height: 100vh;
+	@include flexbox();
+	@include flex-direction(column);
+}
+
+.slick-dots {
+	margin: 4px 0 0 0;
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+	color: transparent;
+	text-align: center;
+	list-style: none;
+	@include flexbox();
+	@include justify-content(center);
+
+	li {
+		margin: 0 2px;
+
+		button {
+			margin: 0;
+			padding: 0;
+			width: 14px;
+			height: 14px;
+			border: 2px solid #fff;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+			background: transparent;
+			display: inline-block;
+			transition: all .3s linear;
+			color: transparent;
+			font-size: 1px;
+			@include border-radius(50%);
+		}
+
+		&.slick-active {
+
+			button {
+				background: $color-orange;
+			}
+		}
+	}
+}
+$arrow-width: 56px;
+$arrow-height: 92px;
+.slick-arrow {
+	position:absolute;
+	color:rgba(0,0,0,0);
+	width: $arrow-width;
+	height: $arrow-height;
+	top:50%;
+	margin-top: #{$arrow-height / 2};
+	background:url(../images/arrows.png) no-repeat 0 0;
+	border:0;
+	outline:none;
+	z-index:12;
+	cursor: pointer;
+
+	&.slick-prev {
+		background-position:0 0;
+		left:-25px;
+
+		@media #{$tablet} {
+			left: 10px;
+		}
+	}
+	&.slick-prev:hover { background-position:0 -#{$arrow-height}; }
+	&.slick-next {
+		background-position:-#{$arrow-width} 0;
+		right:-25px;
+
+		@media #{$tablet} {
+			right: 10px;
+		}
+	}
+	&.slick-next:hover { background-position:-#{$arrow-width} -#{$arrow-height}; }
+	&:active { transform: translate(0,3px); }
+}
+
+.section_title {
+	text-transform: uppercase;
+	text-align: center;
+	color: #ae8931;
+	font-size: 65px;
+	line-height: 1em;
+	margin-bottom: 20px;
+
+	@media #{$tablet} {
+		font-size: 30px;
+	}
+}
+
+.btn,
+a.btn:link,
+a.btn:visited {
+	display: inline-block;
+	font-size: 36px;
+	color: $color-white;
+	background: url(../images/btn_bcg.png) no-repeat center bottom #ffb34a;
+	line-height: 40px;
+	height: 52px;
+	width: auto;
+	border-radius:52px;
+	padding: 0 50px;
+	text-decoration: none;
+	text-transform: uppercase;
+    border:0;
+    border-bottom: 10px solid #d48f35;
+	box-shadow: 0 1px 13px #000;
+
+	&:hover {
+		background-color: #d48f35;
+	}
+	&:active {
+		transform: translate(0, 2px);
+	}
+}
+
+.button,
+a.button:link,
+a.button:visited {
+	display: inline-block;
+	font-size: 18px;
+	color: #fff;
+	line-height: 39px;
+	text-decoration: none;
+	background-color: #49596b;
+	border: 2px solid #fff;
+	padding: 0 45px;
+	border-radius: 50px;
+	transition: .2s border-color, .2s color;
+
+	span {
+		position: relative;
+		z-index: 10;
+	}
+}
+a.button:active {
+	transform: translate(0,3px);
+}
+
+a.button:hover {
+	color: #ffc04f;
+	border-color: #ffc04f;
+}
+
+.checkbox {
+	input[type="checkbox"] {
+		display: none;
+
+		+ label {
+			position: relative;
+			color: #525b66;
+			font-size: 24px;
+			text-transform: uppercase;
+			line-height: 29px;
+			display: block;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 29px;
+				height: 29px;
+				background: url(../images/checkbox.png) no-repeat 0 0;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+		}
+		&:checked {
+			+ label:before {
+				background-position: -29px 0;
+			}
+		}
+	}
+}
+.page_h1_container h1 {
+	text-align: center;
+	padding: 20px;
+	margin: 0;
+	position: relative;
+	z-index: 10;
+
+	span {
+		display: block;
+		font-size: 30px;
+
+		@media #{$tablet} {
+			font-size: 26px;
+		}
+	}
+}
+.block_title {
+	color: #646c7f;
+	font-size: 72px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1em;
+	margin-bottom: 20px;
+}
+
+.skype {
+	display: inline-block;
+	color: #03a9f4;
+	
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		background: url(../images/icon_skype.png) no-repeat center center;
+		width: 34px;
+		height: 34px;
+		margin: 0 10px;
+	}
+}
+.image_left {
+	float: left;
+	margin: 0 10px 10px 0;
+
+	@media #{$tablet} {
+		float: none;
+		margin: 0 10px 10px 10px;
+		max-width: 100%;
+	}
+}
+.image_right {
+	float: right;
+	margin: 0 0 10px 10px;
+
+	@media #{$tablet} {
+		float: none;
+		margin: 0 10px 10px 10px;
+		max-width: 100%;
+	}
+}

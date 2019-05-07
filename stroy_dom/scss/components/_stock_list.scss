@@ -1,0 +1,64 @@
+.stock_list {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  padding: 0 15px;
+  margin-bottom: 50px;
+
+  &__pics {
+    background-color: #000000;
+    line-height: 0;
+    display: inline-block;
+
+    &:hover {
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    img {
+      opacity: .4;
+      width: 100%;
+      transition: .2s all;
+    }
+  }
+
+  &__item {
+    width: 380px;
+    border: 1px solid #d0d4d9;
+    margin-bottom: 50px;
+    position: relative;
+
+    a.button:link {
+      background-color: #ffffff;
+      color: #49596b;
+      border-color: #49596b;
+      font-family: 'Uni Sans', Arial, sans-serif;
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        color: #ed9d0b;
+        border-color: #ed9d0b;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-family: 'Uni Sans', Arial, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ed9d0b;
+    line-height: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    padding: 14px;
+  }
+}

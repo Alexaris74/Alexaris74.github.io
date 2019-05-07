@@ -1,0 +1,65 @@
+.index_advantages {
+  min-height: 386px;
+  background-image: url("../images/index_advantages_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, .4);
+
+  .container {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    min-height: 386px;
+  }
+
+  &__list {
+    @include flexbox();
+    @include justify-content(space-between);
+  }
+
+  &__icon {
+    width: 187px;
+    height: 216px;
+    background-image: url("../images/advantages/advantages__icon_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    transition: .5s top;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__item {
+
+    width: 200px;
+    text-align: center;
+
+    &:hover {
+      .index_advantages__icon {
+        top: -10px;
+      }
+
+      p {
+        color: $link-color;
+      }
+
+    }
+
+    p {
+      color: #fff;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+
+

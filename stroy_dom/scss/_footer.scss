@@ -1,0 +1,89 @@
+.footer {
+  &-top {
+    min-height: 40px;
+    background-color: #313f4e;
+
+    &__phone {
+
+      p {
+        font-family: "Uni Sans Book", Arial, sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        min-height: 40px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-end);
+
+        svg {
+          margin-right: 8px;
+        }
+
+        span:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    min-height: 140px;
+    background-color: #3b4a5a;
+    padding-top: 10px;
+
+    .container {
+      @include flexbox();
+      @include justify-content(space-between);
+    }
+
+    &__col {
+      margin-right: 45px;
+    }
+
+    &__nav
+    {
+
+      @include flexbox();
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, .7);
+        font-size: 16px;
+
+        &:hover {
+          color: #ffbc42;
+        }
+      }
+
+      .active {
+        color: #ffbc42;
+      }
+    }
+
+    &__copy {
+      position: relative;
+      text-align: right;
+      margin-top: -30px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        font-family: 'Uni Sans', Arial, sans-serif;
+        color: #6c7b8a;
+        margin-top: 10px;
+      }
+    }
+
+    &__logo {
+      @include align-self(flex-end);
+    }
+  }
+}

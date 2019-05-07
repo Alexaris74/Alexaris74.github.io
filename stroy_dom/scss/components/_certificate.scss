@@ -1,0 +1,42 @@
+.certificate {
+  padding: 30px 0 92px 0;
+  background: url(../images/delivery/bcg.jpg) repeat-x center bottom #f8f9f9;
+
+  .section_title {
+    color: #525252;
+  }
+
+  &__data {
+    @include flexbox();
+    @include justify-content(space-around);
+
+    @media #{$tablet} {
+      display: block;
+    }
+
+    padding: 20px 0 0 0;
+
+    &__item {
+
+      .certificate__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: #acacab;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .certificate__image {
+        background: url(../images/certificates/ramka.png) no-repeat 0 0;
+        width: 226px;
+        height: 286px;
+        box-sizing: border-box;
+        padding: 22px 0 0 23px;
+
+        @media #{$tablet} {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.order_form {
+  height: 357px;
+  box-sizing: border-box;
+  background: url(../images/order_form/bcg.jpg) repeat-x center center;
+  box-shadow: 0 6px 57px rgba(0,0,0,.37) inset;
+  position: relative;
+  margin-bottom: 40px;
+
+  .container {
+    position: relative;
+    height: 357px;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+
+      @media #{$tablet} {
+        display: none;
+      }
+    }
+    &:before {
+      background: url(../images/order_form/phone.png) no-repeat 0 0;
+      width: 235px;
+      height: 352px;
+      bottom: -53px;
+      left: -28px;
+    }
+    &:after {
+      background: url(../images/order_form/apparat.png) no-repeat 0 0;
+      width: 567px;
+      height: 552px;
+      bottom: 0;
+      right: -78px;
+    }
+  }
+
+  * {
+    outline: none;
+  }
+
+  .section_title {
+    font-size: 50px;
+    color: #ffb049;
+    text-shadow: 0 2px 9px #000;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 7px;
+    margin: 0 0 10px 243px;
+
+    @media #{$tablet} {
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+  }
+
+  .form {
+    margin: 0 490px 0 220px;
+    position: relative;
+
+    @media #{$tablet} {
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    .line {
+      margin-bottom: 10px;
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        border: 1px solid #fff;
+        background: rgba(255,255,255,.43);
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 55px;
+        height: 55px;
+        padding: 0 20px;
+        color: #000;
+        font-family: $font-family-base;
+        border-radius: 55px;
+
+        @include placeholder(#000);
+      }
+
+      textarea {
+        height: 130px;
+        line-height: 1.2em;
+        padding: 10px 20px;
+      }
+
+      .privancy_text label {
+        font-size: 16px;
+        line-height: 1.2em;
+        text-transform: none;
+        padding-left: 34px;
+        color: #fff;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    .button_container {
+      text-align: center;
+    }
+  }
+}
