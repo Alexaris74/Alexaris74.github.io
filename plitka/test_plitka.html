@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <style>
+        body {
+            background: #000000;
+        }
+        .grid-item {
+            float: left;
+            width: 350px;
+            height: 350px;
+            background: #e39126;
+            border: 5px solid #000;
+            overflow: hidden;
+        }
+        .grid-item.span-2 {
+            width: 700px;
+            height: 700px;
+
+        }
+        .grid {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        * { box-sizing: border-box; }
+    </style>
+    <script>
+        jQuery(document).ready(function($){
+            $('.grid').isotope({
+                itemSelector: '.grid-item',
+                masonry: {
+                columnWidth: 10
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item01.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item02.jpg" alt=""></div>
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item04.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item03.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item05.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item06.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item07.jpg" alt=""></div>
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item08.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item10.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item11.jpg" alt=""></div>
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item09.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item12.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item13.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item07.jpg" alt=""></div>
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item08.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item10.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item11.jpg" alt=""></div>
+        <div class="grid-item span-2"><img style="width: 700px; height: 700px;" src="images/item09.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item12.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item13.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item03.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item05.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item06.jpg" alt=""></div>
+        <div class="grid-item"><img style="width: 350px; height: 350px;" src="images/item07.jpg" alt=""></div>
+    </div>
+
+</body>
+</html>
