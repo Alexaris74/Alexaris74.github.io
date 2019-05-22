@@ -5665,4 +5665,126 @@ label[data-bx-user-consent] input {
     .quantity__container button:active {
       transform: translate(0, 1px); }
 
+.catalog_recipes .grid-item {
+  float: left;
+  width: 350px;
+  height: 350px;
+  background: #000000;
+  border: 5px solid #000;
+  overflow: hidden; }
+.catalog_recipes .grid-item.span-2 {
+  width: 700px;
+  height: 700px;
+  overflow: hidden; }
+.catalog_recipes .grid-item h3 {
+  position: relative;
+  z-index: 5;
+  font-size: 60px;
+  padding: 40px 30px;
+  line-height: 40px; }
+.catalog_recipes .grid-item a {
+  text-decoration: none; }
+.catalog_recipes .grid-item img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%); }
+.catalog_recipes .grid-item.span-1 span {
+  position: absolute;
+  z-index: 5;
+  bottom: -80px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  max-height: 80px;
+  transition: .5s bottom; }
+.catalog_recipes .grid-item.span-1:hover span {
+  bottom: 0; }
+.catalog_recipes .grid-item.span-1:hover img {
+  opacity: 1;
+  top: 160px; }
+.catalog_recipes .grid-item.span-2 img {
+  transition: 5s transform linear; }
+.catalog_recipes .grid-item.span-1 img {
+  opacity: .6;
+  transition: .5s all; }
+.catalog_recipes .grid-item.span-2:hover img {
+  transform: translate(-50%, -50%) scale(1.1); }
+.catalog_recipes .grid {
+  max-width: 1920px;
+  margin: 0 auto; }
+.catalog_recipes * {
+  box-sizing: border-box; }
+.catalog_recipes .grid-item__blue h3,
+.catalog_recipes .grid-item__blue span {
+  background: #01e2e4;
+  color: #000000; }
+.catalog_recipes .grid-item__orange h3,
+.catalog_recipes .grid-item__orange span {
+  background: #fdc300;
+  color: #FFFFFF; }
+.catalog_recipes .grid-item__red h3,
+.catalog_recipes .grid-item__red span {
+  background: #b42836;
+  color: #FFFFFF; }
+.catalog_recipes .grid-item__gray h3,
+.catalog_recipes .grid-item__gray span {
+  background: #c6c6c6;
+  color: #FFFFFF; }
+@media screen and (max-width: 420px) {
+  .catalog_recipes .grid-item.span-2,
+  .catalog_recipes .grid-item.span-1 {
+    width: 100%; }
+  .catalog_recipes .grid-item.span-1 img {
+    width: 100%;
+    height: auto;
+    opacity: 1; }
+  .catalog_recipes .grid-item.span-1 span {
+    bottom: 0; }
+  .catalog_recipes .grid-item h3 {
+    font-size: 24px;
+    padding: 20px 30px;
+    text-align: center; } }
+.catalog_recipes .grid-item__close {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  right: 10px;
+  top: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: transform .5s; }
+.catalog_recipes .grid-item__close:hover {
+  transform: rotate(180deg); }
+.catalog_recipes .grid-item__close path {
+  fill: black; }
+.catalog_recipes .grid-item__close svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+.catalog_recipes .grid-item__close span {
+  background: none; }
+.catalog_recipes .recipes_item_img {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid rgba(39, 226, 226, 0.3);
+  line-height: 0; }
+.catalog_recipes .recipes_item_title {
+  text-align: center;
+  font-size: 24px; }
+.catalog_recipes p {
+  font-size: 28px; }
+
 /*# sourceMappingURL=style.css.map */
