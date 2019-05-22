@@ -1,0 +1,368 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Skal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="js/fancybox3/jquery.fancybox.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slinky/css/jquery.slinky.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="js/paroller.js-master/dist/jquery.paroller.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <script src="js/slinky/dist/jquery.slinky.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.touchwipe.js"></script>
+    <script src="js/fancybox3/jquery.fancybox.js"></script>
+    <script src="js/jquery.nav.js"></script>
+<!--    <script src="script.js"></script>-->
+<!--    <script src="blocks.js"></script>-->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+            $('.grid').isotope({
+                itemSelector: '.grid-item',
+                masonry: {
+                    columnWidth: 10
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            background: #000000;
+        }
+        .grid-item {
+            float: left;
+            width: 350px;
+            height: 350px;
+            background: #000000;
+            border: 5px solid #000;
+            overflow: hidden;
+        }
+        .grid-item.span-2 {
+            width: 700px;
+            height: 700px;
+            overflow: hidden;
+        }
+        .grid-item h3 {
+            position: relative;
+            z-index: 5;
+            font-size: 60px;
+            padding: 40px 30px;
+            line-height: 40px;
+        }
+
+        .grid-item a {
+            text-decoration: none;
+        }
+
+        .grid-item img {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid-item.span-1 span {
+            position: absolute;
+            z-index: 5;
+            bottom: -80px;
+            width: 100%;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 24px;
+            max-height: 80px;
+            transition: .5s bottom;
+        }
+
+        .grid-item.span-1:hover span {
+            bottom: 0;
+        }
+
+        .grid-item.span-1:hover img {
+            opacity: 1;
+            top: 160px;
+        }
+
+        .grid-item.span-2 img {
+            transition: 5s transform linear;
+        }
+
+        .grid-item.span-1 img {
+            opacity: .6;
+            transition: .5s all;
+        }
+
+        .grid-item.span-2:hover img {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .grid {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        * { box-sizing: border-box; }
+
+        .grid-item__blue h3,
+        .grid-item__blue span {
+            background: #01e2e4; color: #000000;
+        }
+        .grid-item__orange h3,
+        .grid-item__orange span {
+            background: #fdc300; color: #FFFFFF;
+        }
+        .grid-item__red h3,
+        .grid-item__red span {
+            background: #b42836; color: #FFFFFF;
+        }
+        .grid-item__gray h3,
+        .grid-item__gray span {
+            background: #c6c6c6; color: #FFFFFF;
+        }
+        @media screen and (max-width: 420px) {
+            .grid-item.span-2,
+            .grid-item.span-1 {
+                width: 100%;
+            }
+            .grid-item.span-1 img {
+                width: 100%;
+                height: auto;
+                opacity: 1;
+            }
+            .grid-item.span-1 span {
+                bottom: 0;
+            }
+            .grid-item h3 {
+                font-size: 24px;
+                padding: 20px 30px;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<body class="index_page">
+<div id="panel"><!-- Bitrix panel --></div>
+
+<div id="html">
+
+    <div class="wrapper">
+        <div class="inner">
+
+            <!-- FLOATED BLOCK -->
+            <div class="floated_block">
+                <div class="floated_block__container">
+                    <a href="#" title="Ваша корзина">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53px" height="62px">
+                            <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M52.714,61.673 C52.513,61.882 52.235,62.000 51.944,62.000 L1.055,62.000 C0.764,62.000 0.486,61.882 0.286,61.673 C0.086,61.465 -0.019,61.183 -0.004,60.896 L2.116,19.912 C2.125,19.749 2.179,19.602 2.254,19.467 C2.261,19.454 2.258,19.438 2.266,19.425 L5.446,14.170 C5.638,13.853 5.983,13.660 6.355,13.660 L7.116,13.660 L6.256,6.445 C6.187,5.868 6.603,5.346 7.184,5.278 L19.120,3.879 C19.151,3.808 19.170,3.733 19.219,3.668 C20.911,1.370 23.633,-0.001 26.500,-0.001 C30.751,-0.001 34.431,3.000 35.307,7.068 L44.789,9.266 C45.063,9.329 45.300,9.498 45.448,9.735 C45.597,9.971 45.644,10.257 45.580,10.528 L44.840,13.660 L46.643,13.660 C47.016,13.660 47.361,13.853 47.553,14.170 L50.733,19.425 C50.740,19.437 50.738,19.452 50.744,19.464 C50.820,19.600 50.875,19.748 50.884,19.912 L53.004,60.896 C53.019,61.184 52.914,61.465 52.714,61.673 ZM7.367,15.762 L6.956,15.762 L5.047,18.914 L7.743,18.914 L7.367,15.762 ZM8.486,7.241 L9.878,18.914 L15.039,18.914 L14.200,15.455 C14.063,14.891 14.413,14.323 14.983,14.188 L24.878,11.829 L24.113,5.410 L8.486,7.241 ZM16.509,15.986 L17.219,18.914 L33.105,18.914 L31.526,12.406 L16.509,15.986 ZM26.499,2.101 C24.984,2.101 23.528,2.612 22.342,3.502 L24.917,3.200 C25.197,3.167 25.476,3.246 25.698,3.419 C25.919,3.591 26.061,3.844 26.094,4.121 L26.955,11.334 L28.029,11.078 L29.062,6.699 C29.126,6.427 29.297,6.193 29.535,6.045 C29.774,5.899 30.062,5.851 30.336,5.915 L32.926,6.516 C31.928,3.925 29.393,2.101 26.499,2.101 ZM30.886,8.201 L30.336,10.528 L32.062,10.117 C32.337,10.052 32.624,10.097 32.864,10.242 C33.103,10.387 33.275,10.622 33.341,10.892 L35.287,18.914 L41.423,18.914 L43.274,11.073 L30.886,8.201 ZM46.043,15.762 L44.345,15.762 L43.601,18.914 L47.952,18.914 L46.043,15.762 ZM48.817,21.017 L4.182,21.017 L2.170,59.899 L50.828,59.899 L48.817,21.017 ZM18.548,23.118 C20.302,23.118 21.729,24.532 21.729,26.271 C21.729,27.639 20.840,28.795 19.608,29.230 L19.608,33.101 C19.608,36.868 22.700,39.932 26.500,39.932 C30.300,39.932 33.391,36.867 33.391,33.101 L33.391,29.230 C32.160,28.795 31.271,27.639 31.271,26.271 C31.271,24.532 32.697,23.118 34.451,23.118 C36.205,23.118 37.632,24.532 37.632,26.271 C37.632,27.639 36.743,28.795 35.511,29.230 L35.511,33.101 C35.511,38.027 31.469,42.034 26.500,42.034 C21.530,42.034 17.488,38.027 17.488,33.101 L17.488,29.230 C16.256,28.795 15.367,27.639 15.367,26.271 C15.367,24.532 16.794,23.118 18.548,23.118 ZM34.451,25.220 C33.867,25.220 33.391,25.692 33.391,26.271 C33.391,26.440 33.441,26.594 33.513,26.736 C33.704,26.462 34.008,26.271 34.369,26.271 L34.451,26.271 C34.839,26.271 35.164,26.488 35.348,26.796 C35.442,26.639 35.511,26.466 35.511,26.271 C35.511,25.692 35.036,25.220 34.451,25.220 ZM17.651,26.796 C17.836,26.488 18.160,26.271 18.548,26.271 C18.936,26.271 19.261,26.488 19.445,26.796 C19.540,26.639 19.608,26.466 19.608,26.271 C19.608,25.692 19.133,25.220 18.548,25.220 C17.963,25.220 17.488,25.692 17.488,26.271 C17.488,26.466 17.557,26.639 17.651,26.796 Z"/>
+                        </svg>
+                        <span class="count">2</span>
+                    </a>
+                    <a href="#" title="Конфигуратор">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46px" height="46px">
+                            <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M43.627,27.831 L40.398,28.369 C40.071,29.446 39.629,30.494 39.101,31.503 L41.004,34.176 C41.811,35.310 41.676,36.858 40.696,37.838 L37.832,40.703 C37.294,41.242 36.583,41.539 35.824,41.539 C35.228,41.539 34.652,41.357 34.171,41.011 L31.509,39.107 C30.510,39.636 29.463,40.069 28.377,40.405 L27.829,43.635 C27.598,45.010 26.416,46.010 25.023,46.010 L20.968,46.010 C19.574,46.010 18.392,45.010 18.162,43.635 L17.624,40.405 C16.576,40.078 15.558,39.665 14.587,39.155 L11.887,41.078 C11.406,41.424 10.839,41.607 10.244,41.607 C9.484,41.607 8.773,41.309 8.235,40.770 L5.372,37.906 C4.382,36.925 4.257,35.377 5.064,34.243 L6.957,31.609 C6.419,30.609 5.977,29.561 5.641,28.484 L2.373,27.927 C0.999,27.696 -0.000,26.514 -0.000,25.120 L-0.000,21.072 C-0.000,19.678 0.999,18.496 2.373,18.265 L5.564,17.727 C5.890,16.641 6.313,15.593 6.842,14.583 L4.920,11.882 C4.113,10.747 4.247,9.200 5.227,8.219 L8.101,5.354 C8.629,4.816 9.350,4.518 10.109,4.518 C10.705,4.518 11.281,4.701 11.762,5.047 L14.405,6.950 C15.404,6.412 16.451,5.970 17.528,5.633 L18.085,2.364 C18.316,0.990 19.498,-0.010 20.891,-0.010 L24.937,-0.010 C26.330,-0.010 27.512,0.990 27.743,2.364 L28.281,5.556 C29.405,5.893 30.491,6.345 31.529,6.893 L34.200,4.989 C34.681,4.643 35.247,4.460 35.843,4.460 C36.602,4.460 37.314,4.758 37.852,5.297 L40.715,8.161 C41.705,9.142 41.830,10.690 41.023,11.824 L39.120,14.487 C39.649,15.487 40.081,16.535 40.417,17.621 L43.646,18.169 C45.020,18.400 46.020,19.582 46.001,20.976 L46.001,25.024 C46.001,26.417 45.001,27.600 43.627,27.831 ZM43.435,20.976 C43.435,20.851 43.348,20.746 43.223,20.726 L39.187,20.044 C38.688,19.967 38.275,19.592 38.150,19.092 C37.784,17.679 37.227,16.323 36.478,15.064 C36.218,14.622 36.237,14.064 36.535,13.651 L38.909,10.315 C38.976,10.209 38.966,10.075 38.880,9.988 L36.016,7.123 C35.949,7.056 35.872,7.046 35.834,7.046 C35.786,7.046 35.738,7.066 35.690,7.094 L32.374,9.478 C31.951,9.777 31.404,9.796 30.962,9.536 C29.674,8.777 28.290,8.209 26.839,7.844 C26.339,7.719 25.965,7.306 25.878,6.796 L25.206,2.788 C25.186,2.663 25.081,2.576 24.956,2.576 L20.910,2.576 C20.785,2.576 20.680,2.663 20.660,2.788 L19.968,6.854 C19.882,7.354 19.507,7.758 19.017,7.892 C17.604,8.258 16.250,8.834 15.000,9.584 C14.558,9.844 14.001,9.825 13.578,9.526 L10.263,7.162 C10.224,7.133 10.176,7.114 10.119,7.114 C10.071,7.114 10.003,7.123 9.936,7.191 L7.073,10.055 C6.986,10.142 6.976,10.286 7.044,10.382 L9.436,13.747 C9.734,14.160 9.763,14.708 9.504,15.150 C8.764,16.410 8.216,17.775 7.860,19.188 C7.736,19.688 7.322,20.063 6.813,20.150 L2.806,20.822 C2.681,20.842 2.594,20.947 2.594,21.072 L2.594,25.120 C2.594,25.245 2.681,25.350 2.806,25.370 L6.871,26.062 C7.370,26.148 7.774,26.523 7.909,27.014 C8.274,28.427 8.850,29.782 9.600,31.032 C9.859,31.474 9.840,32.032 9.542,32.455 L7.178,35.771 C7.111,35.877 7.120,36.012 7.207,36.098 L10.071,38.963 C10.138,39.030 10.215,39.040 10.253,39.040 C10.301,39.040 10.349,39.021 10.397,38.992 L13.761,36.598 C13.982,36.435 14.251,36.358 14.510,36.358 C14.731,36.358 14.962,36.415 15.164,36.531 C16.403,37.242 17.729,37.790 19.104,38.146 C19.594,38.271 19.968,38.675 20.055,39.184 L20.728,43.222 C20.747,43.347 20.852,43.433 20.977,43.433 L25.023,43.433 C25.148,43.433 25.254,43.347 25.273,43.222 L25.955,39.184 C26.032,38.684 26.407,38.271 26.906,38.146 C28.319,37.781 29.674,37.223 30.933,36.473 C31.375,36.214 31.932,36.233 32.345,36.531 L35.680,38.905 C35.718,38.934 35.766,38.953 35.824,38.953 C35.872,38.953 35.939,38.944 36.007,38.877 L38.870,36.012 C38.957,35.925 38.966,35.781 38.899,35.685 L36.526,32.339 C36.228,31.916 36.208,31.368 36.468,30.926 C37.217,29.667 37.775,28.311 38.140,26.898 C38.265,26.408 38.668,26.033 39.178,25.946 L43.214,25.273 C43.339,25.254 43.425,25.148 43.425,25.024 L43.435,25.024 L43.435,20.976 ZM23.005,32.926 C17.528,32.926 13.078,28.475 13.078,22.995 C13.078,17.515 17.528,13.064 23.005,13.064 C28.482,13.064 32.932,17.515 32.932,22.995 C32.932,28.475 28.482,32.926 23.005,32.926 ZM23.005,15.660 C18.959,15.660 15.673,18.948 15.673,22.995 C15.673,27.042 18.959,30.330 23.005,30.330 C27.051,30.330 30.337,27.042 30.337,22.995 C30.337,18.948 27.051,15.660 23.005,15.660 Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /FLOATED BLOCK -->
+
+            <!-- HEADER -->
+            <header class="header">
+                <div class="main">
+                    <div class="container">
+                        <div class="header_logo">
+                            <a href="catalog.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div class="header_menu">
+                            <nav class="header_menu_links">
+                                <a href="catalog.html" class="active"><span>Каталог</span></a>
+                                <a href="about.html"><span>О нас</span></a>
+                                <a href="akcii.html"><span>Акции</span></a>
+                                <a href="contacts.html"><span>Контакты</span></a>
+                            </nav>
+                        </div>
+                        <div class="phones">8 (800) 550-18-14</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MOBILE HEADER -->
+            <div id="mobile_header_container" class="only_mobile">
+                <div id="mobile_header">
+                    <div class="logo_container">
+                        <a href="/" class="logo_mobile"><img src="images/mobile_logo.png" alt=""></a>
+                    </div>
+                    <div class="phone_container">
+                        <div class="phone_container__phone"><a href="tel:+79268561024" class="mobile_phone">+7 (926) 856-10-24</a></div>
+                        <div class="phone_container__email"><a href="mailto:almax@info.ru">almax<span>@</span>info.ru</a></div>
+                    </div>
+                    <div class="mobile_menu">
+                        <div class="menu__button">
+                            <div class="menu__button-open">
+                                <div class="menu__button-line n1"></div>
+                                <div class="menu__button-line n2"></div>
+                                <div class="menu__button-line n3"></div>
+                            </div>
+                            <div class="menu__button-close">
+                                <div class="menu__button-line n4"></div>
+                                <div class="menu__button-line n5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /HEADER -->
+            <!-- BREADCRUMB  -->
+            <div class="container">
+                <div class="bx-breadcrumb" itemprop="http://schema.org/breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="#" title="Главная" itemprop="item">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="0">
+                    </div>
+                    <div class="bx-breadcrumb-item" id="bx_breadcrumb_1" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <i class="fa fa-angle-right"></i>
+                        <a href="catalog.html" title="" itemprop="item">
+                            <span itemprop="name">Рецепты</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+            <!-- /BREADCRUMB  -->
+
+            <div class="container">
+                <h1>Рецепты</h1>
+            </div>
+
+            <section class="catalog_recipes">
+                <div class="container">
+                        <div class="grid">
+                            <div class="grid-item span-2 grid-item__blue">
+                                <a href="">
+                                    <h3>самогоноварение</h3>
+                                    <img src="images/item01.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__blue">
+                                <a href="">
+                                    <img src="images/item02.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-2 grid-item__orange">
+                                <a href="">
+                                    <h3>пивоварение</h3>
+                                    <img src="images/item04.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__blue">
+                                <a href="">
+                                    <img src="images/item03.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__orange">
+                                <a href="">
+                                    <img src="images/item05.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__orange">
+                                <a href="">
+                                    <img src="images/item06.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__red">
+                                <a href="">
+                                    <img src="images/item07.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-2 grid-item__red">
+                                <a href="">
+                                    <h3>виски</h3>
+                                    <img src="images/item08.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-item span-2 grid-item__gray">
+                                <a href="">
+                                    <h3>копчение</h3>
+                                    <img src="images/item09.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__gray">
+                                <a href="">
+                                    <img src="images/item10.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__gray">
+                                <a href="">
+                                    <img src="images/item11.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__gray">
+                                <a href="">
+                                    <img src="images/item12.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                            <div class="grid-item span-1 grid-item__gray">
+                                <a href="">
+                                    <img src="images/item13.jpg" alt="">
+                                    <span>самогоноварение в домашних условиях...</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="left">
+                        <nav class="footer_menu">
+                            <a href="catalog.html" class="active"><span>Каталог</span></a>
+                            <a href="about.html"><span>О нас</span></a>
+                            <a href="akcii.html"><span>Акции</span></a>
+                            <a href="contacts.html"><span>Контакты</span></a>
+                        </nav>
+                        <div class="footer_logo">
+                            <a href="/"><img src="images/footer_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer_text">
+                            Уральский Завод Бытовых Изделий на рынке с 1997 года. Всё наше производство расположено в России — это даёт возможность осуществлять строгий технический контроль и добиваться оптимальных цен. Наш завод находится в самом центре страны, на Урале, это сделать доставку быстрее и выгоднее для всех регионов, открыть отделения по всей России и создать более 30 сервисных центров.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+</body>
