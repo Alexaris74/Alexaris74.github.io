@@ -246,8 +246,9 @@
       height: 162px;
       background-image: url("../images/hexagon_mini.svg");
       left: -15px; }
-  .plus .swiper-container2 {
-    overflow: hidden; }
+  @media screen and (max-width: 749px) {
+    .plus .swiper-container2 {
+      overflow: hidden; } }
   .plus .swiper-pagination-bullet {
     width: 21px;
     height: 21px;
@@ -913,7 +914,8 @@
     margin-right: 5px; }
     @media screen and (max-width: 749px) {
       .reviews-designer .swiper-slide-active {
-        margin-right: -10px; } }
+        margin-right: 0;
+        width: 130px !important; } }
   .reviews-designer .btn {
     padding: 10px 20px;
     border: 2px solid #3f3a7e;
@@ -949,6 +951,8 @@
       width: 325px;
       text-align: left;
       margin: 0 auto; } }
+  .reviews-designer__item {
+    width: 130px; }
 
 .form-designer {
   background-color: rgba(255, 255, 255, 0.9);
@@ -962,12 +966,16 @@
   @media screen and (max-width: 749px) {
     .form-designer {
       width: 100%;
-      left: -100%; } }
+      left: calc(-100% - 25px);
+      right: auto; } }
   .form-designer form {
     width: 550px;
     margin-left: 25px;
     margin-top: 110px;
     position: relative; }
+    @media screen and (max-width: 749px) {
+      .form-designer form {
+        width: 100%; } }
     .form-designer form h3 {
       font-size: 48px;
       color: #3f3a7e;
@@ -1201,6 +1209,9 @@ a {
 
 .why_mobile {
   display: none; }
+  @media screen and (max-width: 749px) {
+    .why_mobile img {
+      width: 100%; } }
   @media screen and (max-width: 749px) {
     .why_mobile {
       display: block;
