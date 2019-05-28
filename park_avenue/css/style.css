@@ -912,6 +912,8 @@
     background-position: 0 -85px; }
   .reviews-designer .swiper-slide-active {
     margin-right: 5px; }
+    .reviews-designer .swiper-slide-active a {
+      opacity: 1; }
     @media screen and (max-width: 749px) {
       .reviews-designer .swiper-slide-active {
         margin-right: 0;
@@ -945,7 +947,8 @@
   .reviews-designer .reviews-designer__desc {
     display: none; }
   .reviews-designer .reviews-designer__hexagon {
-    display: block; }
+    display: block;
+    opacity: .6; }
   @media screen and (max-width: 749px) {
     .reviews-designer__text {
       width: 325px;
