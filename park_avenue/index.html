@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="js/fancybox3/jquery.fancybox.css">
+    <script src="js/fancybox3/jquery.fancybox.js"></script>
+    <script>
+        new WOW().init();
+        $(document).ready(function () {
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 5,
+                direction: 'horizontal',
+                loop: true,
+                centeredSlides: true,
+                breakpoints: {
+                    500: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+
+            var mySwiper3 = new Swiper ('.swiper-container3', {
+                slidesPerView: 1,
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination3',
+                    type: 'bullets',
+                }
+            });
+
+            var mySwiper2 = undefined;
+
+            function initSwiper() {
+                var screenWidth = $(window).width();
+                if(screenWidth < 700 && mySwiper2 == undefined) {
+                    var mySwiper2 = new Swiper ('.swiper-container2', {
+                        navigation: {
+                            nextEl: '.swiper-button-next2',
+                            prevEl: '.swiper-button-prev2',
+                        },
+                        slidesPerView: 1,
+                        direction: 'horizontal',
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                        }
+                    });
+                    console.log('Hello');
+                } else if (screenWidth > 991) {
+                    $('.plus__item').removeClass('swiper-slide');
+                    console.log('Hello');
+                }
+            }
+
+            initSwiper();
+            $(window).on('resize', function(){
+                initSwiper();
+                });
+
+            mySwiper.on('sliderMove', function() {
+                var selectSlide = $('.swiper-slide-active > a').attr("href");
+                $(selectSlide).fadeIn("slow");
+                $(".reviews-designer__desc").each(function(indx, element){
+                    var elemId = $(element).attr('id').slice(6);
+                    if(elemId != selectSlide.slice(7)) {
+                        $(element).hide();
+                    }
+                });
+            });
+
+            $('.swiper-button-prev, .swiper-button-next').on('click', function () {
+                var selectSlide = $('.swiper-slide-active > a').attr("href");
+                $(selectSlide).fadeIn("slow");
+                $(".reviews-designer__desc").each(function(indx, element){
+                    var elemId = $(element).attr('id').slice(6);
+                    if(elemId != selectSlide.slice(7)) {
+                        $(element).hide();
+                    }
+                });
+            });
+            
+            $('.slide-top__btn, .designer-wrap').on('click', function () {
+                $('.form-designer, .designer-wrap').toggleClass('active');
+
+                return false;
+            });
+
+            $('.form-designer__close, .designer-wrap').on('click', function () {
+                $('.form-designer, .designer-wrap').removeClass('active');
+                return false;
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="designer-wrap">
+
+    <!-- SLIDE -->
+    <div class="slide-top">
+        <div class="container">
+            <div class="slide-top__hexagon">
+                <div class="slide-top__title">
+                    <p class="wow fadeInDown" data-wow-duration="1s">Центр дизайна и Интерьера <span>Park Avenue</span> приглашает к сотрудничеству дизайнеров, архитекторов и декораторов</p>
+                    <a href="" class="btn slide-top__btn wow fadeInDown" data-wow-duration="1s">Стать партнером</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SLIDE -->
+
+    <!-- PLUS -->
+    <section class="plus">
+        <div class="container">
+            <h2 class="plus__title--mobile">Преимущества работы с нами</h2>
+            <div class="swiper-container2">
+                <div class="plus__row swiper-wrapper">
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_01.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Мы ценим Вашу репутацию</b><br>
+                                Высочайший уровень обслуживания, профессиональные менеджеры, гарантия на поставленную продукцию – все это оставит у Вашего заказчика только лучшее впечатление о нашей совместной работе.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_02.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Персональный менеджер </b><br>
+                                Мы предоставим Вам личного менеджера, который будет отвечать на все Ваши вопросы и  делать подбор по Вашему проекту.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_03.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Индивидуальный подход </b><br>
+                                К системе агентских вознаграждений</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="2s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_04.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Мы самостоятельно решаем </b><br>
+                                С Вашим клиентом все логистические и юридические вопросы – наша команда логистов имеет большой опыт по доставке товаров по России и ближнему зарубежью.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="2s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_05.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Гибкая система оплаты </b><br>
+                                Для Ваших клиентов – мы готовы обсуждать персональные условия оплаты и рассрочки с Вашими клиентами.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="2s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_06.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Бесплатная доставка </b><br>
+                                по Москве, Санкт-Петербургу, Екатеринбургу и Челябинску.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_07.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Размещение Вашего портфолио в разделе «Дизайнеры»</b><br>
+                                Наш портал ежедневно посещают тысячи человек, всем им будет доступна информация с Вашим портфолио и Вашими контактами. Запуск раздела планируется на осень.</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_08.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Мы постоянно проводим обучения и конкурсы </b><br>
+                                Для дизайнеров</p>
+                        </div>
+                    </div>
+                    <div class="plus__item swiper-slide wow fadeInUp" data-wow-delay="1s">
+                        <div class="plus__photo">
+                            <img src="images/plus__photo_09.png" alt="">
+                        </div>
+                        <div class="plus__text">
+                            <p><b>Мы осуществляем индивидуальный подбор</b><br>
+                                Ваш персональный менеджер сформирует Вам предложение по Вашему проекту.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /PLUS -->
+
+    <!-- WORK-US -->
+    <section class="work-us">
+        <div class="work-us__title">
+            <h3>Как начать с нами работать?</h3>
+        </div>
+            <div class="work-us__wrap">
+                <div class="work-us__photo">
+                    <img class="work-us__laptop" src="images/laptop.png" alt="">
+                    <img class="work-us__smartphone wow slideInLeft" src="images/smartphone.png" alt="">
+                    <img class="work-us__tablet wow slideInLeft" src="images/tablet.png" alt="">
+                    <img class="work-us__calc wow slideInUp" src="images/calc.png" alt="">
+                    <img class="work-us__apple wow slideInRight" src="images/apple.png" alt="">
+                    <img class="work-us__glass" src="images/glass.png" alt="">
+                    <img class="work-us__coffee" src="images/coffee.png" alt="">
+                </div>
+                <div class="work-us__steps">
+                    <div class="work-us__steps-item work-us__steps-item--1 wow fadeInUp" data-wow-delay=".5s">
+                        <p class="work-us__num"><span>01</span></p>
+                        <p class="work-us__text"><span>Свяжитесь с нами</span></p>
+                    </div>
+                    <div class="work-us__steps-item work-us__steps-item--2 wow fadeInUp" data-wow-delay="1s">
+                        <p class="work-us__num"><span>02</span></p>
+                        <p class="work-us__text"><span>Зарегистрируйтесь</span></p>
+                    </div>
+                    <div class="work-us__steps-item work-us__steps-item--3 wow fadeInUp" data-wow-delay="1.5s">
+                        <p class="work-us__num"><span>03</span></p>
+                        <p class="work-us__text"><span>Ваш персональный менеджер</span> свяжется с нами для согласования деталей проекта</p>
+                    </div>
+                    <div class="work-us__steps-item work-us__steps-item--4 wow fadeInUp" data-wow-delay="1s">
+                        <p class="work-us__num"><span>04</span></p>
+                        <p class="work-us__text"><span>Расчет стоимости</span> и утверждение номенклатуры.</p>
+                    </div>
+                    <div class="work-us__steps-item work-us__steps-item--5 wow fadeInUp" data-wow-delay="1s">
+                        <p class="work-us__num"><span>05</span></p>
+                        <p class="work-us__text"><span>Заключение договора</span> и поставка товара</p>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">стать партнером</a>
+        <img class="work-us__clock" src="images/clock.png" alt="">
+        <img class="work-us__bush" src="images/bush.png" alt="">
+    </section>
+    <section class="work-us__mobile">
+        <h2 class="work-us--mobile">Как начать с нами работать?</h2>
+        <div class="swiper-container3">
+            <div class="work-us__block swiper-wrapper">
+                <div class="work-us__steps-item work-us__steps-item--1 swiper-slide">
+                    <p class="work-us__num"><span>01</span></p>
+                    <p class="work-us__text"><span>Свяжитесь<br> с нами</span></p>
+                </div>
+                <div class="work-us__steps-item work-us__steps-item--2 swiper-slide">
+                    <p class="work-us__num"><span>02</span></p>
+                    <p class="work-us__text"><span>Зарегистрируйтесь</span></p>
+                </div>
+                <div class="work-us__steps-item work-us__steps-item--3 swiper-slide">
+                    <p class="work-us__num"><span>03</span></p>
+                    <p class="work-us__text"><span>Ваш персональный<br> менеджер</span><br> свяжется с нами для<br> согласования деталей проекта</p>
+                </div>
+                <div class="work-us__steps-item work-us__steps-item--4 swiper-slide">
+                    <p class="work-us__num"><span>04</span></p>
+                    <p class="work-us__text"><span>Расчет стоимости</span><br> и утверждение номенклатуры.</p>
+                </div>
+                <div class="work-us__steps-item work-us__steps-item--5 swiper-slide">
+                    <p class="work-us__num"><span>05</span></p>
+                    <p class="work-us__text"><span>Заключение<br> договора</span><br> и поставка товара</p>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">стать партнером</a>
+        <div class="swiper-pagination3"></div>
+    </section>
+    <!-- /WORK-US -->
+
+    <!-- WHY -->
+    <section class="why_desktop" style="text-align: center;">
+        <img src="images/why_01.jpg" alt="">
+    </section>
+    <section class="why_mobile" style="text-align: center;">
+        <img src="images/why_mobile_01.jpg" alt="">
+    </section>
+    <!-- /WHY -->
+
+    <!-- REVIEWS-DESIGNER -->
+    <section class="reviews-designer">
+        <div class="container">
+            <div class="reviews-designer__title">
+                <h3>Отзывы дизайнеров</h3>
+            </div>
+            <div class="swiper-container">
+                <div class="reviews-designer__wrap swiper-wrapper">
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review1" style="background-image: url('images/reviews-designer__item01.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review2" style="background-image: url('images/reviews-designer__item02.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review3" style="background-image: url('images/reviews-designer__item03.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review4" style="background-image: url('images/reviews-designer__item04.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review5" style="background-image: url('images/reviews-designer__item05.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review6" style="background-image: url('images/reviews-designer__item01.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review7" style="background-image: url('images/reviews-designer__item02.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review8" style="background-image: url('images/reviews-designer__item03.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review9" style="background-image: url('images/reviews-designer__item04.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                    <div class="reviews-designer__item swiper-slide">
+                        <a href="#review10" style="background-image: url('images/reviews-designer__item05.png')" class="reviews-designer__hexagon">
+                            <div class="reviews-designer__hexTop"></div>
+                            <div class="reviews-designer__hexBottom"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="review1" style="display: block;" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Ирина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review2" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Марина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review3" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Василиса</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review4" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Арина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review5" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Анна</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review6" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Галина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review7" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Ирина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review8" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Ирина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review9" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Ирина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <div id="review10" class="reviews-designer__desc">
+                <p class="reviews-designer__name">Ирина</p>
+                <time>27.09.2018</time>
+                <div class="reviews-designer__text">
+                    <p>Благодарю коллектив и менеджера Екатерину за быстрое и оперативное консультирование меня как клиента на расстоянии. Могу посоветовать всем, кто приобретает Мебель в другой регион в данном интернет-магазине. Покупку ещё не совершала, доставки не было ещё. Так что об этом видимо в отдельном отзыве. Делюсь первыми впечатлениями от профессиональной работы с данным ритейлером.</p>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <a href="" class="btn">Все отзывы</a>
+        </div>
+    </section>
+    <!-- /REVIEWS-DESIGNER -->
+
+</div>
+
+<!-- FORM-DESIGNER -->
+<div class="form-designer">
+    <div class="form-designer__wrap">
+        <form action="">
+            <a class="form-designer__close" href="#close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29px" height="28px">
+                <path fill-rule="evenodd"  fill="rgb(154, 154, 154)"
+                      d="M28.642,26.521 L27.228,27.935 L14.500,15.207 L1.772,27.935 L0.358,26.521 L13.086,13.793 L1.065,1.772 L2.479,0.358 L14.500,12.379 L26.521,0.358 L27.935,1.772 L15.914,13.793 L28.642,26.521 Z"/>
+                </svg>
+            </a>
+            <h3>Стать партнером</h3>
+            <input placeholder="Ваше имя *" type="text">
+            <input placeholder="Контактный телефон *" type="tel">
+            <input placeholder="Ваш E-mail *" type="email">
+            <textarea placeholder="Сообщение" name="" id="" cols="30" rows="10"></textarea>
+            <label><input class="form-designer__checkbox" type="checkbox"><span class="form-designer__checkbox-custom"></span><p>Я согласен с <a href="">условиями политики</a> конфиденциальности</p></label>
+            <button class="btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+<!-- /FORM-DESIGNER -->
+
+</body>
+</html>
