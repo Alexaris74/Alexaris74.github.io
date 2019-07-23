@@ -1,0 +1,126 @@
+.order-form {
+  width: 443px;
+  background-color: rgba(51, 73, 105, .46);
+  padding: 0 21px;
+  display: none;
+  max-height: 420px;
+
+  &.fancybox-content {
+    overflow: initial;
+  }
+
+  @media #{$phone} {
+    display: none;
+  }
+
+  &__block {
+    position: relative;
+
+    &:before {
+      width: 551px;
+      height: 479px;
+      content: '';
+      background-image: url("../images/bg-form.png");
+      position: absolute;
+      z-index: 10;
+      right: -280px;
+
+      @media #{$phone} {
+        content: none;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -58px;
+    left: 0;
+    background-image: url(../images/top-block-form__top.png);
+    width: 443px;
+    height: 60px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-image: url("../images/top-block-form__bottom.png");
+    width: 443px;
+    height: 81px;
+    bottom: -81px;
+    left: 0;
+  }
+
+  p {
+    color: #ffe51c;
+    font-size: 40px;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: normal;
+    line-height: 36px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+
+    @media #{$phone} {
+      font-size: 35px;
+    }
+  }
+
+  textarea,
+  input {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    max-height: 117px;
+    color: #8a8e98;
+    font-size: 24px;
+    width: 100%;
+    outline: none;
+    padding-left: 20px;
+    position: relative;
+    z-index: 20;
+
+    &::placeholder {
+      color: #8a8e98;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: 'Akrobat', Arial, sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  input {
+    min-height: 50px;
+    margin-top: 8px;
+  }
+
+  textarea {
+    margin-bottom: -5px;
+    padding-top: 10px;
+  }
+
+  button {
+    background-color: #3ca3e0;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 14px 60px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: normal;
+    margin-top: 8px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .fancybox-close-small {
+    color: white;
+    padding: 0;
+    right: 0;
+    top: -55px;
+    background-color: transparent;
+  }
+
+}

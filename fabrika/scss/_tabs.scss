@@ -1,0 +1,86 @@
+.tabs_container {
+  margin-bottom: 20px;
+
+  ul.tabs {
+    @include flexbox();
+
+    margin:0 0 20px 0;
+    padding:0;
+    list-style:none;
+
+    @media #{$tablet} {
+
+      @include justify-content(center);
+
+      overflow: auto;
+      border-radius: 0;
+      width: 100%;
+      line-height: 36px;
+      height: auto;
+      margin: 0;
+    }
+
+    li {
+      position: relative;
+      margin-right: 30px;
+
+      a:link,
+      a:visited {
+        display: block;
+        line-height: 59px;
+        border-radius: 59px;
+        padding: 0 55px;
+        color: #ae8931;
+        text-decoration: none;
+        font-size: 40px;
+        text-transform: uppercase;
+
+        @media #{$tablet} {
+          font-size: 20px;
+          margin: 0 5px;
+        }
+
+        border: 2px solid #ae8931;
+        background: transparent;
+
+        @media #{$tablet} {
+          white-space: nowrap;
+          line-height: 36px;
+          padding: 0 10px;
+        }
+      }
+      a:hover {
+        background: #ae8931;
+        border-color: #ae8931;
+        color: #f8f9f9;
+      }
+      &.active {
+        a:link,
+        a:visited {
+          background: #e39126;
+          border-color: #e39126;
+          color: #f8f9f9;
+        }
+      }
+    }
+  }
+
+  .tabs_content_container {
+    border-top:0;
+    padding:10px 0;
+
+    @media #{$tablet} {
+      padding: 10px;
+    }
+
+    .tabs_content {
+      display: none;
+      padding:10px 0;
+
+      &.active { display: block; }
+    }
+  }
+
+  .slick-arrow.slick-prev { left:-50px;}
+  .slick-arrow.slick-next { right:-50px;}
+}

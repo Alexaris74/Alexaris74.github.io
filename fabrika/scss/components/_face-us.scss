@@ -1,0 +1,142 @@
+.face-us {
+  background-image: url("../images/face-us_BG.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+
+  @media #{$phone} {
+    background: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1125px;
+    height: 870px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+    background-image: url("../images/face-us_BG.gif");
+    background-repeat: no-repeat;
+
+    @media #{$phone} {
+      content: none;
+    }
+  }
+
+  &__row {
+    @include flexbox();
+    @include justify-content(space-between);
+
+    @media #{$phone} {
+      display: block;
+    }
+  }
+
+  &__welcome {
+    width: 480px;
+    position: relative;
+
+    @media #{$phone} {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+    }
+  }
+
+  h2 {
+    font-size: 60px;
+    color: #3ca3e0;
+    font-family: "Uni Sans", Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background: #f8fcff;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 15px;
+    margin-bottom: 25px;
+
+    @media #{$phone} {
+      font-size: 45px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:nth-child(1) {
+      width: 687px;
+    }
+
+    &:nth-child(2) {
+      width: 514px;
+      margin-left: auto;
+    }
+
+    img {
+      display: block;
+
+      @media #{$phone} {
+        width: 100%;
+      }
+    }
+
+    span {
+      display: block;
+      background-color: #405461;
+      font-family: "Uni Sans", Arial, sans-serif;
+      font-weight: 300;
+      font-size: 36px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      padding: 15px;
+
+      @media #{$phone} {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    font-family: "Uni Sans Book", Arial, sans-serif;
+    font-weight: normal;
+    color: #5e6c84;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(249, 252, 255, 0));
+    position: relative;
+    top: 400px;
+    padding-top: 10px;
+
+    h3 {
+      font-weight: 300;
+      color: #3a475d;
+      font-size: 32px;
+    }
+  }
+
+  &__caption {
+
+    p {
+      font-size: 32px;
+      color: #405461;
+      font-family: "Uni Sans Book", Arial, sans-serif;
+      font-weight: normal;
+
+      span {
+        font-size: 24px;
+        color: #92a0a9;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 100px;
+
+    @media #{$phone} {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.leaders {
+  background-image: url("../images/leaders_BG.jpg");
+  background-repeat: no-repeat;
+  min-height: 800px;
+  background-position: center;
+  margin-bottom: 80px;
+
+  @media #{$phone} {
+    background-position: -354px -20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 60px;
+    color: #ffa71d;
+    font-family: 'Uni Sans', Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    line-height: 48px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 10;
+
+    @media #{$phone} {
+      font-size: 28px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-family: 'Uni Sans Book', Arial, sans-serif;
+    line-height: 30px;
+    font-size: 24px;
+    color: #788498;
+    position: relative;
+    z-index: 10;
+
+    @media #{$phone} {
+      line-height: 22px;
+      font-size: 19px;
+    }
+
+    span {
+      color: #3ca3e0;
+    }
+  }
+
+  &__row {
+    @include flexbox();
+    @include align-items(center);
+
+    @media #{$phone} {
+      @include flex-wrap(wrap);
+    }
+  }
+
+  &__text {
+    width: 523px;
+    background-color: rgba(249, 252, 255, .9);
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 50px 30px 0 50px;
+
+    @media #{$phone} {
+      padding: 20px 10px 0 10px;
+    }
+
+    p {
+      font-family: 'Uni Sans Book', Arial, sans-serif;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+      color: #687590;
+
+      @media #{$phone} {
+        line-height: 22px;
+      }
+    }
+
+    b {
+      font-family: 'Uni Sans', Arial, sans-serif;
+      font-size: 36px;
+      color: #3ca3e0;
+      font-weight: normal;
+    }
+  }
+
+  &__form {
+    text-align: right;
+
+    @media #{$phone} {
+      text-align: center;
+    }
+
+    p {
+      color: #5d636f;
+      font-family: 'Uni Sans', Arial, sans-serif;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    input {
+      min-height: 50px;
+      background-color: #FFFFFF;
+      width: 100%;
+      border: 1px solid #dadfe8;
+      border-radius: 25px;
+      margin-bottom: 7px;
+      padding-left: 20px;
+      font-family: "Uni Sans", Arial, sans-serif;
+      font-weight: 300;
+      color: #8c8c8c;
+      font-size: 30px;
+      outline: none;
+
+      &::placeholder {
+        font-family: "Uni Sans", Arial, sans-serif;
+        font-weight: 300;
+        color: #8c8c8c;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__button {
+    background-color: #ffa71d;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px 70px;
+    border-radius: 25px;
+  }
+
+  &__after {
+    width: 675px;
+    height: 362px;
+
+    &:hover {
+      .twentytwenty-right-arrow,
+      .twentytwenty-left-arrow{
+        animation-play-state: paused;
+      }
+    }
+
+    @media #{$phone} {
+      width: 355px;
+      margin-top: 50px;
+    }
+  }
+}

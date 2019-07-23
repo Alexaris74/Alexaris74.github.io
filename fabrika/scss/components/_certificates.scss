@@ -1,0 +1,157 @@
+.certificates {
+  min-height: 700px;
+  margin-bottom: 120px;
+
+  @media #{$phone} {
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  &__wrapper {
+    background-image: url("../images/certificates__wrapper_BG.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media #{$phone} {
+      background: none;
+    }
+
+    &:hover {
+      &:before {
+        transform: rotate(5deg);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url("../images/pen.png");
+      background-repeat: no-repeat;
+      bottom: -110px;
+      width: 219px;
+      height: 217px;
+      right: -26px;
+      transform: rotate(0);
+      transition: .5s all ease-in;
+
+      @media #{$phone} {
+        content: none;
+      }
+    }
+  }
+
+  h2 {
+    font-family: "Uni Sans", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 48px;
+    color: #3c4453;
+    padding-bottom: 20px;
+
+    @media #{$phone} {
+      font-size: 50px;
+    }
+
+    span {
+      color: #3ca3e0;
+    }
+  }
+
+  &__pics {
+    width: 370px;
+    height: 510px;
+    padding: 10px;
+
+    @media #{$phone} {
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    line-height: 30px;
+    max-width: 400px;
+    padding-bottom: 120px;
+
+    @media #{$phone} {
+      display: none;
+    }
+
+    h3 {
+      color: #404040;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: "Uni Sans", Arial, sans-serif;
+      font-weight: normal;
+    }
+
+    p {
+      color: #767f90;
+      font-family: "Uni Sans Book", Arial, sans-serif;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 33px;
+
+      span {
+        color: #3ca3e0;
+      }
+    }
+  }
+
+  &__item {
+    @include flexbox();
+    @include justify-content(space-between);
+  }
+
+  &__list {
+    max-width: 830px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 138px;
+    top: 58px;
+
+    @media #{$phone} {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__preview {
+    width: 365px;
+    left: 755px;
+    top: -60px;
+
+    @media #{$phone} {
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .slick-current {
+      .certificates__prev-item {
+        img {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__prev-item {
+
+    img {
+      filter: grayscale(100%);
+      opacity: .5;
+      transition: .3s all;
+
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+}

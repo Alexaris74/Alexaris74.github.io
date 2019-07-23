@@ -1,0 +1,90 @@
+.slick-custom {
+
+  .slick-dots {
+
+    li {
+      width: 80px;
+      height: 5px;
+      margin: 0 1px;
+
+      button {
+        width: 80px;
+        height: 5px;
+        background: #ccd5de;
+        padding: 0;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+
+    li.slick-active {
+      button {
+        background-color: #788898;
+      }
+    }
+
+  }
+
+  &__prev,
+  &__next {
+    width: 25px;
+    height: 38px;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__next {
+    background-image: url("../images/slick-next.svg");
+    right: -15px;
+
+    &:hover {
+      background-image: url("../images/slick-next-disabled.svg");
+    }
+  }
+
+  &__next.slick-disabled {
+    background-image: url("../images/slick-next-disabled.svg");
+    right: -15px;
+  }
+
+  &__prev.slick-disabled {
+    background-image: url("../images/slick-prev-disabled.svg");
+    right: -15px;
+  }
+
+  &__prev {
+    background-image: url("../images/slick-prev.svg");
+    left: -25px;
+
+    &:hover {
+      background-image: url("../images/slick-prev-disabled.svg");
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: calc(50% - 50px);
+    width: 100%;
+    opacity: 0;
+    transition: .3s opacity ease;
+
+    &--certificates {
+      position: absolute;
+      top: 300px;
+      width: 420px;
+      left: 305px;
+    }
+  }
+
+}
+
+.products {
+  .slick-dots {
+    bottom: 0;
+  }
+}

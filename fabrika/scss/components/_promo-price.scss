@@ -1,0 +1,126 @@
+.promo-price {
+  margin-bottom: 60px;
+
+  @media #{$phone} {
+    min-height: 720px;
+  }
+
+  &__wrapper {
+    background-image: url("../images/promo-price_BG.jpg");
+    background-repeat: no-repeat;
+    min-height: 620px;
+    position: relative;
+
+    @media #{$phone} {
+      background-image: url("../images/promo-price_BG_mobile.jpg");
+      position: absolute;
+      height: 300px;
+      width: 100%;
+      left: 0;
+      background-position: top center;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    z-index: 15;
+    width: 443px;
+    background-color: rgba(51, 73, 105, .46);
+    padding: 0 21px;
+    left: 50%;
+    top: 200px;
+    padding-bottom: 60px;
+
+    @media #{$phone} {
+      left: 0;
+      top: 490px;
+      padding-bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -58px;
+      left: 0;
+      background-image: url("../images/top-block-form__top.png");
+      width: 443px;
+      height: 58px;
+
+      @media #{$phone} {
+        width: 100%;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url("../images/top-block-form__bottom.png");
+      width: 443px;
+      height: 81px;
+      bottom: -81px;
+      left: 0;
+
+      @media #{$phone} {
+        width: 100%;
+      }
+    }
+
+    p {
+      color: #ffe51c;
+      font-size: 40px;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-weight: normal;
+      line-height: 36px;
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    textarea,
+    input {
+      background: #FFFFFF;
+      border: none;
+      border-radius: 25px;
+      max-height: 117px;
+      color: #8a8e98;
+      font-size: 24px;
+      width: 100%;
+      outline: none;
+      padding-left: 20px;
+
+      &::placeholder {
+        color: #8a8e98;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-family: 'Akrobat', Arial, sans-serif;
+        font-weight: 500;
+      }
+    }
+
+    input {
+      min-height: 50px;
+      margin-top: 8px;
+    }
+
+    textarea {
+      margin-bottom: -5px;
+      padding-top: 10px;
+    }
+
+    button {
+      background-color: #3ca3e0;
+      color: #FFFFFF;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 14px 60px;
+      border-radius: 50px;
+      border: none;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-weight: normal;
+      margin-top: 8px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.works-us {
+  background-image: url(../images/advantages_BG.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-top: 35px;
+
+  h2 {
+    font-size: 60px;
+    color: #3c4453;
+    font-family: "Uni Sans", Arial, sans-serif;
+    font-weight: normal;
+    line-height: 48px;
+
+    @media #{$phone} {
+      font-size: 42px;
+      line-height: 35px;
+    }
+  }
+
+  &__list {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    padding-left: 130px;
+
+    @media #{$phone} {
+      margin-top: 0;
+      justify-content: space-between;
+      padding-left: 0;
+    }
+
+    li {
+      width: 270px;
+      font-family: "Uni Sans", Arial, sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      color: #5e6c84;
+      margin-bottom: 80px;
+
+      @media #{$phone} {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(5){
+        margin-top: -40px;
+
+        @media #{$phone} {
+          margin-top: -8px;
+        }
+      }
+
+      &:nth-child(4) {
+
+        @media #{$phone} {
+          margin-top: 12px;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6){
+        margin-top: -80px;
+
+        @media #{$phone} {
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(6) {
+
+        @media #{$phone} {
+          margin-top: -8px;
+        }
+      }
+      
+      span {
+        display: block;
+        position: relative;
+      }
+
+      b {
+        font-family: "Uni Sans", Arial, sans-serif;
+        font-weight: normal;
+        font-size: 30px;
+        color: #374254;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      background-image: url("../images/work_span_bg.png");
+      background-repeat: no-repeat;
+      width: 211px;
+      height: 27px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+
+      @media #{$phone} {
+        content: none;
+      }
+    }
+
+    & + p {
+      margin-top: 0;
+
+      @media #{$phone} {
+        line-height: 20px;
+      }
+    }
+  }
+
+}

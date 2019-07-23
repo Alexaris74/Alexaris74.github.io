@@ -1,0 +1,127 @@
+.advantages {
+  background-image: url("../images/advantages_BG.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 920px;
+
+  &-hexagon {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    max-width: 995px;
+    margin: 0 auto;
+
+    &__item {
+      background-image: url("../images/hexagon_small.svg");
+      background-size: contain;
+      width: 276px;
+      height: 320px;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding-top: 35px;
+      position: relative;
+      top: 0;
+      transition: .5s top ease;
+      background-position: center;
+
+      &:hover {
+        top: -20px;
+      }
+
+      h3 {
+        font-size: 36px;
+        font-family: 'Bebas Neue', Arial, sans-serif;
+        font-weight: normal;
+        color: #3ca3e0;
+        margin-bottom: 0;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+        line-height: 26px;
+        font-size: 26px;
+        font-family: 'Bebas Neue', Arial, sans-serif;
+        font-weight: normal;
+        color: #5e6c84;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      svg {
+        margin-bottom: 20px;
+      }
+
+      &--active {
+        width: 318px;
+        height: 369px;
+        background-image: url("../images/hexagon_big.svg");
+        background-size: contain;
+
+        h3 {
+          font-size: 55px;
+          font-family: 'Bebas Neue', Arial, sans-serif;
+          font-weight: bold;
+          color: #ffe200;
+        }
+
+        p {
+          color: #f9fcff;
+        }
+
+        svg {
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+
+  }
+
+  &-moment {
+    margin-top: 200px;
+
+    @media #{$phone} {
+      margin-top: 100px;
+    }
+
+    &__list {
+      @include flexbox();
+      @include justify-content(space-around);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      @media #{$phone} {
+        @include flex-wrap(wrap);
+      }
+
+      li {
+        font-size: 18px;
+        color: #5e6c84;
+        font-family: 'Uni Sans', Arial, sans-serif;
+        font-weight: normal;
+        line-height: 18px;
+        max-width: 240px;
+
+        @media #{$phone} {
+          text-align: center;
+          margin-bottom: 50px;
+          width: 100%;
+        }
+
+        &:first-child {
+          text-align: center;
+        }
+      }
+
+      span {
+        font-size: 72px;
+        color: #3ca3e0;
+        font-family: 'Uni Sans Book', Arial, sans-serif;
+        font-weight: normal;
+      }
+    }
+
+  }
+}

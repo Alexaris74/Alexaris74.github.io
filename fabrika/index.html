@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="js/fancy/jquery.fancybox.min.css">
+    <script src="js/fancy/jquery.fancybox.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <!--Animate-->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--WOW-->
+    <script src="js/wow/wow.min.js"></script>
+
+    <!--SPINCREMENT-->
+    <script src="js/jquery.spincrement.js"></script>
+
+    <!--Plugin Slick-->
+    <link href="js/slick/slick.css" rel="stylesheet" />
+    <link href="js/slick/slick-theme.css" rel="stylesheet" />
+    <script src="js/slick/slick.js"></script>
+
+    <!--Twentytwenty-->
+    <link href="js/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <script src="js/twentytwenty/jquery.twentytwenty.js"></script>
+    <script src="js/twentytwenty/jquery.event.move.js"></script>
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="index_page">
+    <div id="panel"><!-- Bitrix panel --></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo"><a href=""><img src="images/logo_fabrika.png" alt=""></a></div>
+                <div class="header__email">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px">
+                        <path fill-rule="evenodd"  fill="rgb(94, 108, 132)"
+                              d="M22.411,22.211 L0.607,22.240 C0.607,22.240 0.607,22.240 0.607,22.240 C0.451,22.240 0.301,22.179 0.191,22.068 C0.080,21.958 0.018,21.808 0.018,21.652 L-0.000,8.889 C-0.000,8.885 0.001,8.881 0.001,8.878 C0.004,8.694 0.092,8.514 0.254,8.402 L3.563,6.116 L3.563,3.692 C3.563,3.367 3.827,3.103 4.152,3.103 L7.923,3.103 L11.166,0.862 C11.369,0.723 11.636,0.723 11.837,0.863 L15.060,3.103 L18.848,3.103 C19.173,3.103 19.437,3.367 19.437,3.692 L19.437,6.145 L22.729,8.433 C22.847,8.514 22.925,8.632 22.961,8.760 C22.974,8.790 22.982,8.842 22.982,8.876 L23.000,21.621 C23.000,21.946 22.737,22.210 22.411,22.211 ZM20.654,21.036 L11.509,13.943 L2.330,21.060 L20.654,21.036 ZM3.563,7.548 L1.625,8.887 L3.563,10.226 L3.563,7.548 ZM1.179,10.012 L1.194,20.451 L8.307,14.935 L1.179,10.012 ZM11.500,2.064 L9.995,3.103 L12.997,3.103 L11.500,2.064 ZM18.259,4.281 L4.741,4.281 L4.741,11.040 L9.284,14.178 L11.148,12.733 C11.362,12.566 11.655,12.572 11.862,12.727 C11.864,12.729 11.867,12.731 11.870,12.733 L13.720,14.168 L18.259,11.013 L18.259,4.281 ZM19.437,7.580 L19.437,10.194 L21.319,8.887 L19.437,7.580 ZM21.806,9.982 L14.696,14.925 L21.820,20.449 L21.806,9.982 ZM6.923,10.287 C6.923,9.961 7.187,9.698 7.512,9.698 L15.487,9.698 C15.813,9.698 16.076,9.961 16.076,10.287 C16.076,10.612 15.813,10.876 15.487,10.876 L7.512,10.876 C7.187,10.876 6.923,10.612 6.923,10.287 ZM15.487,7.814 L7.512,7.814 C7.187,7.814 6.923,7.551 6.923,7.225 C6.923,6.900 7.187,6.636 7.512,6.636 L15.487,6.636 C15.813,6.636 16.076,6.900 16.076,7.225 C16.076,7.551 15.813,7.814 15.487,7.814 Z"/>
+                    </svg>
+                    <a href="sales@vsekompressora.ru">sales@vsekompressora.ru</a>
+                </div>
+                <div class="header__phone"><a href="tel:88005008130">8-800-500-81-30</a></div>
+                <div class="header__button">
+                    <a data-fancybox data-src="#order-form" href="javascript:;"><b>заказать звонок</b></a>
+                    <span>перезвоним за 10 мин</span>
+                </div>
+                <div class="header__phone--mobile">
+                    <a href="tel:88005008130">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43px" height="43px">
+                            <path fill-rule="evenodd"  fill="rgb(13, 134, 205)"
+                                  d="M37.098,21.725 L34.907,21.725 C34.907,14.572 29.090,8.757 21.939,8.757 L21.938,6.567 C30.297,6.564 37.098,13.364 37.098,21.725 ZM21.938,10.348 L21.937,12.537 C27.003,12.537 31.125,16.658 31.122,21.723 L33.314,21.722 C33.314,15.451 28.211,10.348 21.938,10.348 ZM21.500,0.014 C9.652,0.014 0.014,9.651 0.014,21.501 C0.014,33.348 9.652,42.986 21.500,42.986 C22.232,42.986 22.824,42.394 22.824,41.662 C22.824,40.929 22.232,40.335 21.500,40.335 C11.113,40.335 2.665,31.885 2.665,21.501 C2.665,11.114 11.113,2.665 21.500,2.665 C31.888,2.665 40.336,11.115 40.336,21.501 C40.336,25.841 38.026,30.143 34.719,31.965 C33.519,32.625 32.217,32.953 30.827,32.965 C31.662,32.469 32.384,31.799 32.921,30.952 C33.026,30.793 33.163,30.654 33.233,30.481 C33.664,29.443 33.702,28.265 33.964,27.168 C34.282,25.768 27.836,23.035 27.276,24.782 C27.073,25.428 26.762,27.476 26.356,28.016 C25.992,28.496 25.102,28.267 24.545,27.795 C23.075,26.542 21.433,24.701 19.994,23.247 L19.996,23.246 C19.960,23.207 19.915,23.165 19.875,23.124 C19.834,23.086 19.794,23.043 19.753,23.003 L19.753,23.005 C18.298,21.565 16.456,19.928 15.205,18.456 C14.732,17.898 14.503,17.006 14.984,16.644 C15.524,16.235 17.571,15.930 18.218,15.725 C19.962,15.167 17.231,8.716 15.829,9.037 C14.734,9.294 13.557,9.335 12.519,9.764 C12.343,9.839 12.206,9.975 12.047,10.080 C8.365,12.413 7.890,18.081 11.483,22.301 C12.853,23.918 14.282,25.479 15.752,27.006 L15.745,27.011 C15.785,27.052 15.828,27.090 15.870,27.129 C15.909,27.170 15.947,27.212 15.986,27.255 L15.993,27.247 C17.519,28.717 19.328,30.884 22.267,32.844 C28.454,36.977 33.203,35.824 35.999,34.290 C40.826,31.631 42.986,25.951 42.986,21.503 C42.986,9.651 33.347,0.014 21.500,0.014 Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /HEADER -->
+
+    <!-- TOP-BLOCK-->
+    <div class="top-block">
+        <div class="container">
+            <h1><span style="color: #fdd304;" class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s">Винтовые компрессоры</span>
+                <span style="color: #2386c0;" class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s">с бесплатной доставкой по РФ.</span><br>
+                <span class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s">Только надежные бренды по сниженной цене!</span><br>
+                <span style="color: #ff2f2f;" class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s">Гарантия до 5 лет</span></h1>
+        </div>
+        <div class="container">
+            <div class="top-block__wrapper">
+                <img class="top-block__img top-block__img--1 wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s" src="images/top-block-img1.png" alt="">
+                <img class="top-block__img top-block__img--2 wow slideInRight" data-wow-duration="2s" data-wow-delay=".5s" src="images/top-block-img2.png" alt="">
+                <img class="top-block__img top-block__img--3 wow slideInRight" data-wow-duration="2s" data-wow-delay=".5s" src="images/top-block-img3.png" alt="">
+                <a data-fancybox data-src="#order-form" href="javascript:;" class="top-block__button button">отправить запрос</a>
+                <div class="top-block__form">
+                    <p>Отправьте запрос<br> и получите выгодное кП</p>
+                    <form action="">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Требуемые характеристики"></textarea>
+                        <input type="email" placeholder="е-mail">
+                        <input type="tel" placeholder="Телефон">
+                        <button type="submit">отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /TOP-BLOCK-->
+
+    <!-- ADVANTAGES-->
+    <div class="advantages">
+        <div class="container">
+            <div class="advantages-hexagon">
+                <div class="advantages-hexagon__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93px" height="94px">
+                        <path fill-rule="evenodd"  fill="rgb(94, 108, 132)" d="M92.896,32.291 C92.583,33.358 91.625,34.074 90.512,34.074 L83.849,34.074 L83.849,38.622 L83.849,42.605 C83.849,43.655 83.103,44.535 82.113,44.743 L82.113,47.065 C82.113,48.270 81.132,49.250 79.926,49.250 L79.744,49.250 L79.744,75.764 L79.926,75.764 C81.132,75.764 82.113,76.744 82.113,77.949 L82.113,80.271 C83.103,80.480 83.849,81.359 83.849,82.409 L83.849,85.073 L88.529,85.073 C89.989,85.073 91.177,86.259 91.177,87.718 L91.177,90.494 C91.177,91.952 89.989,93.139 88.529,93.139 L4.471,93.139 C3.011,93.139 1.822,91.952 1.822,90.494 L1.822,87.718 C1.822,86.259 3.011,85.073 4.471,85.073 L9.151,85.073 L9.151,82.409 C9.151,81.359 9.896,80.480 10.887,80.271 L10.887,77.949 C10.887,76.744 11.868,75.764 13.074,75.764 L13.256,75.764 L13.256,73.712 C13.256,72.983 13.847,72.392 14.577,72.392 C15.306,72.392 15.898,72.983 15.898,73.712 L15.898,77.084 C15.898,77.813 15.306,78.403 14.577,78.403 L13.529,78.403 L13.529,80.383 L22.886,80.383 L22.886,78.403 L21.838,78.403 C21.109,78.403 20.517,77.813 20.517,77.084 L20.517,47.931 C20.517,47.202 21.109,46.611 21.838,46.611 L22.886,46.611 L22.886,44.790 L13.529,44.790 L13.529,46.612 L14.577,46.612 C15.306,46.612 15.898,47.202 15.898,47.931 L15.898,65.417 C15.898,66.146 15.306,66.736 14.577,66.736 C13.847,66.736 13.256,66.146 13.256,65.417 L13.256,49.250 L13.074,49.250 C11.868,49.250 10.887,48.270 10.887,47.066 L10.887,44.744 C9.896,44.536 9.151,43.656 9.151,42.605 L9.151,38.622 L9.151,34.074 L2.487,34.074 C1.375,34.074 0.417,33.358 0.103,32.292 C-0.210,31.226 0.207,30.106 1.143,29.504 L45.072,1.275 C45.939,0.717 47.060,0.717 47.928,1.275 L54.085,5.232 C54.699,5.626 54.876,6.442 54.481,7.056 C54.087,7.668 53.269,7.846 52.656,7.451 L46.498,3.495 L3.022,31.435 L10.084,31.435 L44.567,9.275 C45.741,8.521 47.258,8.521 48.432,9.275 L82.916,31.435 L89.978,31.435 L59.685,11.968 C59.072,11.574 58.894,10.758 59.289,10.145 C59.684,9.532 60.501,9.355 61.115,9.749 L91.857,29.504 C92.792,30.106 93.210,31.226 92.896,32.291 ZM81.207,82.954 C81.075,82.998 80.935,83.023 80.788,83.023 L68.789,83.023 C68.645,83.023 68.507,82.999 68.378,82.957 L68.378,85.073 L81.207,85.073 L81.207,82.954 ZM78.423,46.611 L79.470,46.611 L79.470,44.790 L70.114,44.790 L70.114,46.612 L71.161,46.612 C71.891,46.612 72.482,47.202 72.482,47.931 L72.482,77.084 C72.482,77.813 71.891,78.403 71.161,78.403 L70.114,78.403 L70.114,80.384 L79.470,80.384 L79.470,78.403 L78.423,78.403 C77.693,78.403 77.102,77.813 77.102,77.084 L77.102,47.931 C77.102,47.202 77.693,46.611 78.423,46.611 ZM53.821,44.744 L53.821,47.066 C53.821,48.270 52.839,49.250 51.633,49.250 L51.452,49.250 L51.452,75.765 L51.633,75.765 C52.839,75.765 53.821,76.745 53.821,77.949 L53.821,80.272 C54.811,80.480 55.557,81.359 55.557,82.409 L55.557,85.073 L65.735,85.073 L65.735,82.409 C65.735,81.359 66.481,80.480 67.472,80.272 L67.472,77.949 C67.472,76.745 68.453,75.765 69.659,75.765 L69.841,75.765 L69.841,49.250 L69.659,49.250 C68.453,49.250 67.472,48.270 67.472,47.066 L67.472,44.744 C66.481,44.536 65.735,43.656 65.735,42.605 L65.735,39.942 L55.557,39.942 L55.557,42.605 C55.557,43.656 54.811,44.536 53.821,44.744 ZM25.528,44.744 L25.528,47.066 C25.528,48.270 24.547,49.250 23.341,49.250 L23.159,49.250 L23.159,75.765 L23.341,75.765 C24.547,75.765 25.528,76.745 25.528,77.949 L25.528,80.272 C26.518,80.480 27.264,81.359 27.264,82.409 L27.264,85.073 L37.443,85.073 L37.443,82.409 C37.443,81.359 38.189,80.480 39.179,80.272 L39.179,77.949 C39.179,76.745 40.160,75.765 41.367,75.765 L41.548,75.765 L41.548,49.250 L41.367,49.250 C40.160,49.250 39.179,48.270 39.179,47.066 L39.179,44.744 C38.189,44.536 37.443,43.656 37.443,42.605 L37.443,39.942 L27.264,39.942 L27.264,42.605 C27.264,43.656 26.518,44.536 25.528,44.744 ZM50.131,46.611 L51.178,46.611 L51.178,44.790 L41.821,44.790 L41.821,46.611 L42.869,46.611 C43.599,46.611 44.190,47.202 44.190,47.931 L44.190,77.084 C44.190,77.813 43.599,78.403 42.869,78.403 L41.821,78.403 L41.821,80.383 L51.178,80.383 L51.178,78.403 L50.131,78.403 C49.401,78.403 48.810,77.813 48.810,77.084 L48.810,47.931 C48.810,47.202 49.401,46.611 50.131,46.611 ZM40.494,83.023 C40.351,83.023 40.214,82.999 40.085,82.958 L40.085,85.073 L52.914,85.073 L52.914,82.953 C52.782,82.998 52.641,83.023 52.493,83.023 L40.494,83.023 ZM40.085,42.151 L40.494,42.151 L40.500,42.151 L52.494,42.151 C52.495,42.151 52.496,42.151 52.496,42.151 C52.497,42.151 52.498,42.151 52.499,42.151 L52.914,42.151 L52.914,39.942 L40.085,39.942 L40.085,42.151 ZM4.471,87.712 L4.465,90.494 L88.529,90.500 C88.531,90.500 88.531,90.500 88.531,90.500 L88.535,87.718 L4.471,87.712 ZM12.208,83.023 C12.063,83.023 11.923,82.998 11.793,82.955 L11.793,85.073 L24.622,85.073 L24.622,82.955 C24.491,82.998 24.352,83.023 24.207,83.023 L12.208,83.023 ZM11.793,42.151 L12.208,42.151 L24.207,42.151 L24.622,42.151 L24.622,42.151 L24.622,39.942 L11.793,39.942 L11.793,42.151 ZM47.003,11.495 C46.697,11.298 46.302,11.298 45.997,11.495 L14.967,31.436 L78.033,31.436 L47.003,11.495 ZM81.207,34.074 L11.793,34.074 L11.793,37.303 L25.943,37.303 L38.764,37.303 L54.235,37.303 L67.057,37.303 L81.207,37.303 L81.207,34.074 ZM81.207,39.942 L68.378,39.942 L68.378,42.151 L68.789,42.151 L68.793,42.151 L80.788,42.151 C80.789,42.151 80.789,42.151 80.790,42.151 C80.790,42.151 80.791,42.151 80.792,42.151 L81.207,42.151 L81.207,39.942 ZM42.569,26.076 C43.239,26.076 43.788,27.497 45.860,27.660 L45.860,22.891 C44.031,22.241 42.000,21.511 42.000,18.914 C42.000,16.357 43.930,15.342 45.860,15.139 L45.860,14.551 C45.860,14.307 46.104,14.084 46.449,14.084 C46.754,14.084 47.059,14.307 47.059,14.551 L47.059,15.099 C48.440,15.139 50.391,15.566 50.391,16.560 C50.391,16.945 50.106,17.716 49.497,17.716 C49.009,17.716 48.481,17.067 47.059,16.966 L47.059,21.085 C48.826,21.734 50.756,22.628 50.756,25.386 C50.756,27.883 49.253,29.263 47.059,29.567 L47.059,30.257 C47.059,30.500 46.754,30.723 46.449,30.723 C46.104,30.723 45.860,30.500 45.860,30.257 L45.860,29.628 C43.341,29.587 41.634,28.228 41.634,27.233 C41.634,26.746 42.061,26.076 42.569,26.076 ZM46.937,27.619 C48.034,27.416 48.725,26.766 48.725,25.610 C48.725,24.332 47.932,23.764 46.937,23.337 L46.937,27.619 ZM45.982,20.699 L45.982,17.006 C44.844,17.148 44.031,17.655 44.031,18.711 C44.031,19.868 44.905,20.293 45.982,20.699 Z"/>
+                    </svg>
+                    <h3>Лизинг и кредит</h3>
+                    <p>Поможем оформить<br> на выгодных условиях</p>
+                </div>
+                <div class="advantages-hexagon__item advantages-hexagon__item--active">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130px" height="130px">
+                        <path fill-rule="evenodd"  fill="rgb(60, 163, 224)" d="M65.000,129.999 C29.159,129.999 -0.000,100.840 -0.000,64.999 C-0.000,29.158 29.159,-0.001 65.000,-0.001 C100.841,-0.001 130.000,29.158 130.000,64.999 C130.000,100.840 100.841,129.999 65.000,129.999 ZM65.000,4.332 C31.549,4.332 4.333,31.548 4.333,64.999 C4.333,98.450 31.549,125.665 65.000,125.665 C98.451,125.665 125.667,98.450 125.667,64.999 C125.667,31.548 98.451,4.332 65.000,4.332 ZM78.000,90.999 L52.162,90.999 L70.607,104.415 C71.578,105.117 71.790,106.474 71.086,107.439 C70.661,108.023 70.003,108.332 69.331,108.332 C68.889,108.332 68.445,108.198 68.059,107.919 L41.817,88.833 L68.061,69.748 C69.030,69.044 70.384,69.259 71.086,70.227 C71.790,71.194 71.576,72.550 70.607,73.252 L52.162,86.665 L78.000,86.665 C91.141,86.665 101.833,75.973 101.833,62.832 C101.833,61.634 102.802,60.666 104.000,60.666 C105.198,60.666 106.167,61.634 106.167,62.832 C106.167,78.363 93.531,90.999 78.000,90.999 ZM58.502,60.663 C57.830,60.663 57.170,60.356 56.747,59.771 C56.043,58.804 56.257,57.448 57.226,56.746 L75.671,43.332 L49.833,43.332 C36.692,43.332 26.000,54.025 26.000,67.165 C26.000,68.364 25.031,69.332 23.833,69.332 C22.635,69.332 21.667,68.364 21.667,67.165 C21.667,51.635 34.303,38.999 49.833,38.999 L75.671,38.999 L57.228,25.583 C56.257,24.881 56.045,23.525 56.749,22.558 C57.449,21.588 58.803,21.376 59.774,22.080 L86.017,41.166 L59.774,60.250 C59.388,60.527 58.944,60.663 58.502,60.663 Z"/>
+                    </svg>
+                    <h3>TRADE-IN</h3>
+                    <p>Выкупим ваш винтовой<br> компрессор<br> в зачет нового!</p>
+                </div>
+                <div class="advantages-hexagon__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96px" height="96px">
+                        <image  x="0px" y="0px" width="96px" height="96px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC0FBMVEVebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIRebIT////sA3slAAAA7nRSTlMAASBCapGrwtLg5+yPaUAdIV2b0PDueihzwPT1FwlVtPb55tfKxL8MB3ehNw1t62g+IxQkkpkucQhs245KGZYiDg8F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" />
+                    </svg>
+                    <h3>Сервис</h3>
+                    <p>Окажем сервисную<br> поддержку<br> по всей России</p>
+                </div>
+            </div>
+            <div class="advantages-moment">
+                <ul class="advantages-moment__list">
+                    <li><span class="advantages-moment__count">7</span><br> лет на рынке</li>
+                    <li>дилер <span class="advantages-moment__count">15</span><br> ведущих производителей</li>
+                    <li><span class="advantages-moment__count">350</span><br>компрессоров, мощностью от 2 до 160 кВт поставляется в среднем в год по всей России </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /ADVANTAGES-->
+
+    <!-- PRODUCTS-->
+    <div class="products wow">
+        <div class="container">
+            <div class="products__wrapper">
+                <div class="products__list">
+                    <div class="products__item-wrap">
+                        <div class="products__item">
+                            <h3><span>Винтовые</span> электрические компрессоры</h3>
+                            <div class="products__img">
+                                <img src="images/den-5.jpg" alt="">
+                            </div>
+                            <div class="products__desc">
+                                <p>+осушитель, ресивер, частотное регулирование, уличное исполнение</p>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="products__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="products__item-wrap">
+                        <div class="products__item">
+                            <h3><span>ДИЗЕЛЬНЫЕ</span> ВИНТОВЫЕ КОМПРЕССОРЫ</h3>
+                            <div class="products__img">
+                                <img src="images/xas.jpg" alt="">
+                            </div>
+                            <div class="products__desc">
+                                <p>любое исполнение: стационарные, на шасси, для кузова газели, для буровых</p>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="products__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="products__item-wrap">
+                        <div class="products__item products__item--select">
+                            <h3><span>Винтовые БУ</span> компрессоры с Гарантией  </h3>
+                            <div class="products__img">
+                                <img src="images/gx7.jpg" alt="">
+                            </div>
+                            <div class="products__desc">
+                                <p>эксклюзивное направление</p>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="products__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="products__item-wrap">
+                        <div class="products__item">
+                            <h3><span>Винтовые</span> электрические компрессоры</h3>
+                            <div class="products__img">
+                                <img src="images/den-5.jpg" alt="">
+                            </div>
+                            <div class="products__desc">
+                                <p>+осушитель, ресивер, частотное регулирование, уличное исполнение</p>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="products__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-custom__arrow slick-custom__arrow--products"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /PRODUCTS-->
+
+    <!-- LEADERS-->
+    <div class="leaders">
+        <div class="container">
+            <div class="leaders__wrapper">
+                <h2>Лидеры в поставках<br> БУ винтовых компрессоров </h2>
+                <h3>– предлагаем самый широкий ассортимент. <br> <span>Качество гарантируем.</span></h3>
+            </div>
+            <div class="leaders__row">
+                <div class="leaders__after twenty-custom">
+                    <img src="images/before_kompressor.png" alt="">
+                    <img src="images/after_kompressor.png" alt="">
+                </div>
+                <div class="leaders__text">
+                    <p><b>Вы получаете:</b><br> качественный компрессор, после полной диагностики и обслуживания, <span style="color: #ff9c00;">с нашей гарантией от 1 до 6 месяцев</span></p>
+                    <p>Есть варианты с минимальной наработкой, с хранения, с новым винтовым блоком <span style="color: #3ca3e0;">– отличная возможность купить почти новый компрессор по цене БУ, да еще и с гарантией, можно в лизинг!</span></p>
+                    <p>В наличии компрессоры от 4 до 200 кВт – европейских и российских производителей!</p>
+                    <div class="leaders__form">
+                        <p>Получите весь список с ценами на почту</p>
+                        <form action="">
+                            <input placeholder="ваш номер телефона" type="text">
+                            <input placeholder="ваша почта" type="text">
+                            <button class="leaders__button" type="submit">ПОЛУЧИТЬ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /LEADERS-->
+
+    <!-- WORK-US-->
+    <div class="works-us">
+        <div class="container">
+            <div class="works-us__wrapper">
+                <h2>Работать с нами<br> <span style="color: #3ca3e0;">выгодно и удобно,</span><br> <span style="color: #5e6c84; font-size: 36px;">потому что:</span></h2>
+                <ul class="works-us__list">
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/sale_icon.svg" alt="">
+                            </span>
+                            <b>скидка</b>
+                        </div>
+                        <p>Грамотно подберем надежные модели с хорошей скидкой</p>
+                    </li>
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/protection_icon.svg" alt="">
+                            </span>
+                            <b>гарантия</b>
+                        </div>
+                        <p>У нас есть бу винтовые компрессора с гарантией</p>
+                    </li>
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/trade_icon.png" alt="">
+                            </span>
+                            <b>трейд-ин</b>
+                        </div>
+                        <p>Зачтем ваш старый компрессор по системе трейд-ин</p>
+                    </li>
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/man_icon.svg" alt="">
+                            </span>
+                            <b>доставка</b>
+                        </div>
+                        <p>Бесплатная доставка и сервисное обслуживание по РФ</p>
+                    </li>
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/leasing_icon.svg" alt="">
+                            </span>
+                            <b>лизинг</b>
+                        </div>
+                        <p>Возможна покупка в лизинг любого оборудования (новое и бу) от 300 тыс.</p>
+                    </li>
+                    <li>
+                        <div class="works-us__title">
+                            <span>
+                                <img src="images/key_icon.png" alt="">
+                            </span>
+                            <b>ПОД ключ</b>
+                        </div>
+                        <p>Поставим запчасти и дополнительное оборудование (от подготовки воздуха до пескоструйного) по низким ценам</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /WORK-US-->
+
+    <!-- STOCK-->
+    <div class="stock">
+        <div class="container">
+            <div class="stock__wrapper">
+                <h2>Акционные предложения!</h2>
+                <h3>до  19  Апреля 2019 </h3>
+                <div class="stock__list">
+                    <div class="stock__item-wrap">
+                        <div class="stock__item">
+                            <h3><span>Atlas Copco XAS 88</span></h3>
+                            <div class="stock__img">
+                                <img src="images/Copco-XAS.jpg" alt="">
+                            </div>
+                            <div class="stock__desc">
+                                <p class="stock__price">
+                                    <b>1150000р.</b><br> 909000 <span>р.</span>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span class="stock__param">Давление</span>
+                                        <span class="stock__value">7 бар</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Мощность</span>
+                                        <span class="stock__value">33 кВт</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Производительность</span>
+                                        <span class="stock__value">5 м3/мин</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="stock__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="stock__item-wrap">
+                        <div class="stock__item">
+                            <h3><span>Comaro SB 2208</span></h3>
+                            <div class="stock__img">
+                                <img src="images/Comaro-SB.jpg" alt="">
+                            </div>
+                            <div class="stock__desc">
+                                <p class="stock__price">
+                                    <b>368 000 р.</b><br> 330 000 <span>р.</span>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span class="stock__param">Давление</span>
+                                        <span class="stock__value">8 бар</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Мощность</span>
+                                        <span class="stock__value">22 кВт</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Производительность</span>
+                                        <span class="stock__value">3,4 м3/мин</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="stock__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="stock__item-wrap">
+                        <div class="stock__item">
+                            <h3><span>ВК-11Р-500</span></h3>
+                            <div class="stock__img">
+                                <img src="images/bk-11.jpg" alt="">
+                            </div>
+                            <div class="stock__desc">
+                                <p class="stock__price">
+                                    <b>264 000 р.</b><br> 327 000 <span>р.</span>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span class="stock__param">Давление</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">7 бар</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Мощность</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">11 кВт</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Производительность</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">1,8 м3/мин</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="stock__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                    <div class="stock__item-wrap">
+                        <div class="stock__item">
+                            <h3><span>ВК-11Р-500</span></h3>
+                            <div class="stock__img">
+                                <img src="images/bk-11.jpg" alt="">
+                            </div>
+                            <div class="stock__desc">
+                                <p class="stock__price">
+                                    <b>264 000 р.</b><br> 327 000 <span>р.</span>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span class="stock__param">Давление</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">7 бар</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Мощность</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">11 кВт</span>
+                                    </li>
+                                    <li>
+                                        <span class="stock__param">Производительность</span>
+                                        <span class="stock__dotted"></span>
+                                        <span class="stock__value">1,8 м3/мин</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a data-fancybox data-src="#order-form" href="javascript:;" class="stock__button button">отправить запрос</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-custom__arrow slick-custom__arrow--stock"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /STOCK-->
+
+    <!-- STOCK-->
+    <div class="promo-price">
+        <div class="container">
+            <div class="promo-price__wrapper">
+                <div class="promo-price__form">
+                    <form action="">
+                        <input type="email" placeholder="Укажите вашу почту">
+                        <input type="tel" placeholder="укажите ваш номер телефона">
+                        <button type="submit">отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /STOCK-->
+
+    <!-- FACE-US-->
+    <div class="face-us">
+        <div class="container">
+            <h2>Наша команда</h2>
+            <div class="face-us__wrapper">
+                <div class="face-us__row">
+                    <div class="face-us__col">
+                        <div class="face-us__list">
+                            <div class="face-us__item">
+                                <img src="images/team_01.jpg" alt="">
+                                <span>коллектив</span>
+                            </div>
+                            <div class="face-us__item">
+                                <img src="images/team_02.jpg" alt="">
+                                <span>сервисная служба</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="face-us__col">
+                        <div class="face-us__welcome">
+                            <img src="images/rakitin.jpg" alt="">
+                            <div class="face-us__desc">
+                                <h3>Приветствую вас<br> на нашем промо сайте! </h3>
+                                <p>Готовы поставить качественное компрессорное оборудование – от бюджетных до премиум брендов. Опытные специалисты смогут грамотно подобрать компрессор с учетом вашего бюджета и условий эксплуатации. Также предлагаем выкуп вашего винтового компрессора в зачет нового. Наше фирменное направление – винтовые б/у компрессоры с гарантией. Экономия вашего бюджета до 70% по сравнению с новым компрессором, без риска – гарантируем качество и работоспособность оборудования!</p>
+                                <p>Мы делаем всё, чтобы в следующий раз при необходимости покупки оборудования или запчастей, вы снова обратились в нашу компанию!</p>
+                                <div class="face-us__caption">
+                                    <p>Алексей Викторович Ракитин <span>коммерческий директор</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FACE-US-->
+
+    <!-- OUR-CLIENTS-->
+    <div class="our-clients">
+        <div class="container">
+            <div class="our-clients__wrapper">
+                <h2>Наши клиенты</h2>
+                <div class="our-clients__list">
+                    <div class="our-clients__item">
+                        <img src="images/bash_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/gaz_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/roskosmos_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/irbis_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/sarz_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/rzd_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/term_logo.png" alt="">
+                    </div>
+                    <div class="our-clients__item">
+                        <img src="images/chtz_logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /OUR-CLIENTS-->
+
+    <!-- CERTIFICATES-->
+    <div class="certificates">
+        <div class="container">
+            <h2><span>Сертификаты</span><br> производителей</h2>
+            <div class="certificates__wrapper">
+                <div class="certificates__list">
+                    <div>
+                        <div class="certificates__item">
+                            <div class="certificates__pics">
+                                <img src="images/cert-01BIG.jpg" alt="">
+                            </div>
+                            <div class="certificates__text">
+                                <h3>ООО ”фабрика компрессоров”</h3>
+                                <p>г. Челябинск имеет статус официального диллера производителя компрессорного оборудования <span>ALMiG Kompressoren GmbH</span> и обладает правом демонстрации и реализации производимой продукции на территории Российской Федерации.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="certificates__item">
+                            <div class="certificates__pics">
+                                <img src="images/cert-02BIG.jpg" alt="">
+                            </div>
+                            <div class="certificates__text">
+                                <h3>ООО ”фабрика компрессоров”</h3>
+                                <p>Статус официального диллера производителя компрессорного оборудования <span>ALMiG Kompressoren GmbH</span> и обладает правом демонстрации и реализации производимой продукции на территории Российской Федерации.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="certificates__item">
+                            <div class="certificates__pics">
+                                <img src="images/cert-03BIG.jpg" alt="">
+                            </div>
+                            <div class="certificates__text">
+                                <h3>ООО ”фабрика компрессоров”</h3>
+                                <p>г. Челябинск имеет статус официального диллера производителя компрессорного оборудования <span>ALMiG Kompressoren GmbH</span> и обладает правом демонстрации и реализации производимой продукции на территории Российской Федерации.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="certificates__item">
+                            <div class="certificates__pics">
+                                <img src="images/cert-04BIG.jpg" alt="">
+                            </div>
+                            <div class="certificates__text">
+                                <h3>ООО ”фабрика компрессоров”</h3>
+                                <p>Статус официального диллера производителя компрессорного оборудования <span>ALMiG Kompressoren GmbH</span> и обладает правом демонстрации и реализации производимой продукции на территории Российской Федерации.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificates__preview">
+                    <div class="certificates__prev-item">
+                        <img src="images/cert-01SM.jpg" alt="">
+                    </div>
+                    <div class="certificates__prev-item">
+                        <img src="images/cert-01SM.jpg" alt="">
+                    </div>
+                    <div class="certificates__prev-item">
+                        <img src="images/cert-01SM.jpg" alt="">
+                    </div>
+                    <div class="certificates__prev-item">
+                        <img src="images/cert-01SM.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slick-custom__arrow--certificates"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /CERTIFICATES-->
+
+    <!-- FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <img src="images/img_top-logo.png" alt="">
+                <a href=""><img src="images/logo_fabrika.png" alt=""></a>
+            </div>
+            <div class="footer__list">
+                <div class="footer__item footer__item--desc">
+                    <p>Политика обработки персональных данных. <br> <a href="">Пользовательское соглашение</a></p>
+                </div>
+                <div class="footer__item footer__item--logo">
+                    <a href=""><img src="images/logo_luxar.svg" alt=""></a>
+                </div>
+                <div class="footer__item footer__item--link">
+                    <a href="tel:88005008130">8-800-500-81-30</a>
+                    <a href="mailto:sales@vsekompressora.ru">sales@vsekompressora.ru</a>
+                </div>
+                <div class="footer__item footer__item--button">
+                    <div class="footer__button">
+                        <a data-fancybox data-src="#order-form" href="javascript:;"><b>заказать звонок</b></a>
+                        <span>перезвоним за 10 мин</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER-->
+
+    <!-- ORDER-FORM -->
+    <div class="order-form" id="order-form">
+        <div class="order-form__block">
+            <p>Отправьте запрос<br> и получите выгодное кП</p>
+            <form action="">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Требуемые характеристики"></textarea>
+                <input type="email" placeholder="е-mail">
+                <input type="tel" placeholder="Телефон">
+                <button type="submit">отправить</button>
+            </form>
+        </div>
+    </div>
+    <!-- /ORDER-FORM -->
+
+</body>
+</html>
