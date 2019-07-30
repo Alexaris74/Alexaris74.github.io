@@ -1,0 +1,132 @@
+.products {
+  margin-bottom: 60px;
+
+  &:hover {
+    .slick-custom__arrow {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 350px;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    @include flexbox();
+    @include justify-content(space-between);
+    min-height: 650px;
+    overflow: hidden;
+  }
+
+  &__item {
+    width: 370px;
+    height: 580px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    background-color: #FFFFFF;
+    position: relative;
+
+    @media #{$phone} {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: #626262;
+      text-transform: uppercase;
+      font-family: 'Uni Sans', Arial, sans-serif;
+      font-weight: normal;
+      line-height: 30px;
+
+      span {
+        color: #0473aa;
+      }
+    }
+
+    &--select {
+
+      .products__desc {
+
+        p {
+          color: #f7dd00;
+          font-size: 30px;
+        }
+
+        &:before {
+          background-color: rgba(94, 108, 132, .8);
+        }
+      }
+    }
+
+    &-wrap {
+      padding: 10px 10px 25px 10px;
+      transition: .5s top ease;
+      position: relative;
+      top: 0;
+
+      &:hover {
+        top: -10px;
+      }
+
+      @media #{$phone} {
+        padding: 0;
+      }
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+    min-height: 235px;
+    left: 0;
+    width: 100%;
+    padding: 0 35px;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background-color: rgba(158, 176, 193, 0.5);
+      transform: skewY(-7deg);
+      height: 100%;
+      top: 25px;;
+    }
+
+
+    p {
+      font-size: 21px;
+      color: #626262;
+      line-height: 30px;
+      font-family: 'Uni Sans Book', Arial, sans-serif;
+      font-weight: normal;
+      z-index: 10;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    white-space: nowrap;
+    bottom: -25px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+

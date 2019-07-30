@@ -1,0 +1,174 @@
+* {
+	@include box-sizing(border-box);
+}
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0 auto;
+	color: $color-base;
+	font-family: $font-family-base;
+	background: #f9fcff;
+	font-size: $font-size-base;
+	position: relative;
+	height: 100%;
+	background-image: url("../images/body_bg.jpg");
+
+	@media #{$phone} {
+		width: 100%;
+	}
+
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+
+	@media #{$tablet} {
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+
+
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1em;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-weight: 300;
+	color: $color-base;
+
+	@media #{$tablet} {
+		font-size: 36px;
+	}
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+h1, h2 {
+	font-size: 48px;
+	font-weight: 300;
+	text-align: center;
+	position: relative;
+	padding-bottom: 35px;
+	display: block;
+	z-index: 20;
+
+	@media #{$tablet} {
+		font-size: 36px;
+	}
+
+	&:after {
+		content: '';
+		width: 433px;
+		height: 30px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url("../images/h2_bg.png");
+		bottom: 0;
+
+		@media #{$phone} {
+			width: calc(100% - 30px);
+			background-position: center;
+		}
+	}
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
+}
+
+p {
+	line-height: 24px;
+}
+
+.button {
+	display: inline-block;
+	background-color: #3ca3e0;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	padding: 15px 40px;
+	text-decoration: none;
+	font-family: 'Bebas Neue', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 26px;
+	border-radius: 25px;
+	transition: .3s all ease;
+	outline: none;
+	border: 1px solid #3ca3e0!important;
+	cursor: pointer;
+
+	&:hover {
+		background-color: white;
+		color: #3ca3e0;
+		border: 1px solid #3ca3e0;
+	}
+}
+
+.checkbox input {
+	position: absolute!important;
+	z-index: -1!important;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox__text {
+	position: relative;
+	padding: 0 0 0 25px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Akrobat', Arial, sans-serif;
+	font-weight: 300;
+	color: #a4b4c5;
+	margin: 10px 0;
+	z-index: 10;
+}
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #f9fcff;
+	border: 2px solid #f9fcff;
+}
+
+.checkbox input:checked + .checkbox__text:before {
+	background: #3ca3e0;
+}
+
+
+
+
+
+
+
+
